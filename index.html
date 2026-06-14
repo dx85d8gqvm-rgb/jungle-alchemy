@@ -19,15 +19,15 @@
       theme: {
         extend: {
           colors: {
-            shell:  '#FFF6EC',   // warm paper background
-            bark:   '#2A1A12',   // warm near-black (text)
-            sun:    '#FF6B35',   // orange — primary CTA
-            berry:  '#FF5C8A',   // hibiscus pink
-            mango:  '#FFB42E',   // sunshine yellow
-            surf:   '#17B7A8',   // tropical teal
-            palm:   '#1FA15C',   // jungle green
-            forest: '#0E3D33',   // deep green (dark sections)
-            forest2:'#09302A',
+            shell:  '#FAF4E8',   // warm ivory background
+            bark:   '#241813',   // espresso (text)
+            sun:    '#C26B43',   // terracotta — primary CTA
+            berry:  '#9E5B43',   // warm clay / rust
+            mango:  '#C7A15A',   // antique gold / honey
+            surf:   '#3F7A6E',   // deep eucalyptus
+            palm:   '#4F6F4A',   // olive forest
+            forest: '#123B30',   // deep emerald (dark sections)
+            forest2:'#0E2F27',
           },
           fontFamily: {
             display: ['Fraunces', 'serif'],
@@ -42,18 +42,18 @@
   <style>
     :root { scroll-behavior: smooth; }
     @media (prefers-reduced-motion: reduce) { :root { scroll-behavior: auto; } }
-    body { background-color: #FFF6EC; color: #2A1A12; }
+    body { background-color: #FAF4E8; color: #241813; }
 
     /* Eyebrow label */
     .eyebrow { font-size: .8rem; font-weight: 800; text-transform: uppercase; letter-spacing: .2em; }
 
     /* Chunky button — the one place we keep the playful "pop" shadow */
-    .btn-pop { box-shadow: 4px 4px 0 0 #2A1A12; transition: transform .15s ease, box-shadow .15s ease; }
-    .btn-pop:hover { transform: translate(-2px,-2px); box-shadow: 6px 6px 0 0 #2A1A12; }
-    .btn-pop:active { transform: translate(2px,2px); box-shadow: 1px 1px 0 0 #2A1A12; }
+    .btn-pop { box-shadow: 4px 4px 0 0 #241813; transition: transform .15s ease, box-shadow .15s ease; }
+    .btn-pop:hover { transform: translate(-2px,-2px); box-shadow: 6px 6px 0 0 #241813; }
+    .btn-pop:active { transform: translate(2px,2px); box-shadow: 1px 1px 0 0 #241813; }
 
     /* Soft, grounded elevation for content cards (replaces the hard sticker shadow) */
-    .card-soft { box-shadow: 0 16px 32px -18px rgba(42,26,18,0.45); }
+    .card-soft { box-shadow: 0 16px 32px -18px rgba(36,24,19,0.40); }
 
     /* Experience grid: 1 / 2 / 3 columns, so the last row centers (gap = 1.25rem) */
     .exp-card { flex: 0 0 100%; max-width: 100%; }
@@ -65,11 +65,11 @@
     .reveal.in { opacity: 1; transform: none; }
     @media (prefers-reduced-motion: reduce) { .reveal { opacity:1 !important; transform:none !important; transition:none; } }
 
-    .squiggle { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='12' viewBox='0 0 120 12'%3E%3Cpath d='M2 7c20-8 38 6 58 0s38-8 58 0' fill='none' stroke='%23FF6B35' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: 0 100%; background-size: 100% 0.5em; padding-bottom: .15em; }
+    .squiggle { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='12' viewBox='0 0 120 12'%3E%3Cpath d='M2 7c20-8 38 6 58 0s38-8 58 0' fill='none' stroke='%23C26B43' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: 0 100%; background-size: 100% 0.5em; padding-bottom: .15em; }
 
     .grain::after { content:""; position:absolute; inset:0; pointer-events:none; opacity:.04; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
 
-    .sun-grad { background: radial-gradient(120% 90% at 20% 0%, rgba(255,180,46,.32), transparent 55%), radial-gradient(120% 120% at 90% 90%, rgba(255,92,138,.26), transparent 60%), linear-gradient(160deg,#1FA15C 0%, #0E3D33 100%); }
+    .sun-grad { background: radial-gradient(120% 90% at 20% 0%, rgba(199,161,90,.30), transparent 55%), radial-gradient(120% 120% at 90% 90%, rgba(194,107,67,.22), transparent 60%), linear-gradient(160deg,#2E5E48 0%, #123B30 100%); }
   </style>
 </head>
 
@@ -327,24 +327,22 @@
         <p class="reveal mt-3 inline-block rounded-full bg-mango border-2 border-bark px-4 py-1 font-bold text-bark" style="transition-delay:.15s">Former Poker Pro → Yoga &amp; Meditation Teacher</p>
         <div class="reveal mt-7 space-y-5 text-xl text-bark/75 font-medium leading-relaxed max-w-xl" style="transition-delay:.2s">
           <p>
-            Beau spent years grinding from the low stakes to the highest levels of pro poker. He learned
-            how to perform at his best and keep his cool when it counted most.
+            Hey, what's up. I'm Beau.
           </p>
           <p>
-            But the real payoff came when he left his career behind for good, realizing it was leaving him
-            feeling unfulfilled, lacking real community, and yearning for more. He stumbled into yoga,
-            meditation, nature, and a deeper sense of peace and purpose.
+            I spent years grinding from the low stakes all the way to the highest levels of pro poker. I
+            learned how to perform at my best and keep my cool when it counted most.
           </p>
           <p>
-            These days he's all about helping people drop the armor, have a genuinely good time, and
-            connecting to something deeper. Jungle Alchemy is the trip he always wished someone had invited
-            him on, so he's putting it on himself.
+            But the real payoff came when I left my poker career behind for good, realizing it was leaving
+            me unfulfilled, without real community, and yearning for more. I went traveling around the world,
+            stumbled into yoga, meditation, nature, new friends, and my life changed forever. I've been able
+            to cultivate a deeper sense of peace and purpose, and now I want to share it with the world.
           </p>
           <p>
-            Jungle Alchemy is not just any retreat. It's a space where people from all around the world can
-            come and drop into a sacred gathering of authentic community building. As AI grows more powerful by
-            the day, strong communities and friendships will be more important than ever. As Beau says, it's
-            hard to have a bad life when your relationships are thriving.
+            These days I'm all about helping people drop the armor, have a genuinely good time, and connect
+            to something deeper. Jungle Alchemy is the trip I wished someone had invited me on, so I'm
+            putting it on myself.
           </p>
         </div>
       </div>
@@ -395,7 +393,7 @@
     <div class="absolute inset-0 sun-grad opacity-35"></div>
     <div class="relative mx-auto max-w-3xl px-5 sm:px-8 lg:px-12">
       <div class="text-center">
-        <p class="reveal font-hand text-3xl text-mango -rotate-1">we keep the crew small on purpose</p>
+        <p class="reveal font-hand text-3xl text-mango -rotate-1">We keep the group small on purpose</p>
         <h2 class="reveal mt-3 font-display font-black text-5xl sm:text-7xl text-white leading-[0.98]" style="transition-delay:.1s">
           Want to come<br/>hang with us?
         </h2>
@@ -443,7 +441,7 @@
       </div>
 
       <div class="mt-10 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-white/40 font-semibold">
-        <p>© 2027 Jungle Alchemy · hosted by Beau Winn</p>
+        <p>© 2026 Jungle Alchemy · hosted by Beau Winn</p>
         <p class="font-hand text-xl text-mango/70">Rejuvenation. Restoration. Adventure.</p>
       </div>
     </div>
