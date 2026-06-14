@@ -21,7 +21,7 @@
           colors: {
             shell:  '#F4EEE2',   // warm sand / ivory background
             bark:   '#2C2A24',   // warm charcoal (text)
-            sun:    '#0E9C8B',   // ocean turquoise — primary
+            sun:    '#E0703A',   // sunset orange — primary
             berry:  '#6F6450',   // warm taupe
             mango:  '#D9A95A',   // honey gold — accents
             surf:   '#5E7B51',   // sage olive
@@ -117,12 +117,13 @@
   <section id="top" class="relative min-h-[100svh] flex items-center overflow-hidden grain sun-grad">
     <!-- HERO IMAGE — REPLACE src with your own sunny jungle/beach photo. Falls back to the green gradient. -->
     <div class="absolute inset-0">
-      <img src="https://images.unsplash.com/photo-1518495973542-4542c06a5843?q=80&w=2400&auto=format&fit=crop"
-           alt="Sunlight streaming through bright green jungle leaves"
-           class="h-full w-full object-cover opacity-60 mix-blend-luminosity"
+      <img src="images/hero.jpg"
+           alt="Golden sunset over the Pacific coastline and jungle near Uvita, Costa Rica"
+           class="h-full w-full object-cover"
            onerror="this.style.display='none'" />
     </div>
-    <div class="absolute inset-0 bg-gradient-to-t from-shell via-forest/30 to-forest/55"></div>
+    <div class="absolute inset-0 bg-gradient-to-tr from-bark/85 via-bark/35 to-transparent"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-bark/45 via-transparent to-transparent"></div>
 
     <div class="relative z-10 mx-auto max-w-7xl px-5 sm:px-8 lg:px-12 w-full pt-24 pb-16">
       <div class="max-w-3xl">
