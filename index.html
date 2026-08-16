@@ -78,8 +78,8 @@
     /* Tweet card overlaid on the poker photo. Scales with the photo (container units) so it always
        sits in the gap between the jacket logo and the hands, on desktop and mobile alike. */
     .frame { container-type: inline-size; }
-    .tweet { position: absolute; left: 7%; right: 7%; top: 66.6%; background: #fff; color: #0f1419; border-radius: 1.5cqw;
-             padding: 1.8cqw 2.6cqw; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    .tweet { position: absolute; left: 50%; transform: translateX(-50%); width: max-content; max-width: 92%; top: 66.6%; background: #fff; color: #0f1419; border-radius: 1.5cqw;
+             padding: 1.8cqw 2.6cqw 2cqw; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
              font-size: 2.6cqw; line-height: 1.3; box-shadow: 0 2.5cqw 5cqw -2cqw rgba(0,0,0,.55); text-align: left; }
     .tweet-head { display: flex; align-items: center; gap: 1.4cqw; margin-bottom: 1cqw; font-size: 2.4cqw; line-height: 1.5; white-space: nowrap; }
     .tweet-avatar { flex: none; width: 4.8cqw; height: 4.8cqw; border-radius: 50%; display: block; object-fit: cover; }
@@ -87,6 +87,7 @@
     .tweet-who { display: inline-flex; align-items: center; gap: .6cqw; min-width: 0; }
     .tweet-verified { flex: none; display: block; width: 3cqw; height: 3cqw; margin: 0 .2cqw 0 0; overflow: visible; }
     .tweet-meta { color: #536471; }
+    .tweet-body { white-space: nowrap; }
     .tweet-body b { font-weight: 700; }
     .tweet-body .at { color: #1d9bf0; }
     @supports not (font-size: 1cqw) { .tweet { font-size: 12px; } }
@@ -221,7 +222,7 @@
           health, and your relationships.
         </p>
         <p>
-          Jungle Alchemy is six days to feel alive again. Six days in the Costa Rican jungle with a small
+          Jungle Alchemy is a retreat designed for you to feel alive again. Six days in the Costa Rican jungle with a small
           group of poker players and entrepreneurs who have been exactly where you are. You&rsquo;ll
           move, rest, eat well, and be fully present in a way the grind never allows. The friendships
           you make here are the kind you keep long after you fly home.
@@ -280,7 +281,7 @@
             <span class="pointer-events-none absolute inset-0 border border-cream/20" aria-hidden="true"></span>
             <div class="tweet" role="figure" aria-label="World Poker Tour tweet, July 14, 2023">
               <div class="tweet-head"><img class="tweet-avatar" src="images/opt/wpt-avatar.png" width="128" height="128" alt="" loading="lazy" decoding="async" /><span class="tweet-who"><span class="tweet-name">World Poker Tour</span><svg class="tweet-verified" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#1d9bf0"/><path d="M7.2 12.4l3.1 3.1L16.8 9.2" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="tweet-meta">@WPT &middot; Jul 14, 2023</span></span></div>
-              <div class="tweet-body">Down to 13 as <b>Beau Winn</b> leaves the field in 14th place after being eliminated by <span class="at">@SpaceyFCB</span> for $163,280.</div>
+              <div class="tweet-body">Down to 13 as <b>Beau Winn</b> leaves the field in 14th place<br/>after being eliminated by <span class="at">@SpaceyFCB</span> for $163,280.</div>
             </div>
           </div>
           <figcaption class="mt-7">
