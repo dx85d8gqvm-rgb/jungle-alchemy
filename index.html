@@ -38,7 +38,7 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Montserrat:wght@600&family=Newsreader:ital,wght@0,400;1,400&display=swap" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript><link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Montserrat:wght@600&family=Newsreader:ital,wght@0,400;1,400&display=swap" rel="stylesheet" /></noscript>
 
-  <link rel="stylesheet" href="styles.css?v=20260816" />
+  <link rel="stylesheet" href="styles.css?v=20260816b" />
 
   <style>
     :root { scroll-behavior: smooth; }
@@ -73,6 +73,22 @@
 
     /* Film grain on dark sections — barely-there texture */
     .grain::after { content:""; position:absolute; inset:0; pointer-events:none; opacity:.035; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
+
+
+    /* Tweet card overlaid on the poker photo. Scales with the photo (container units) so it always
+       sits in the gap between the jacket logo and the hands, on desktop and mobile alike. */
+    .frame { container-type: inline-size; }
+    .tweet { position: absolute; left: 7%; right: 7%; top: 66.6%; background: #fff; color: #0f1419; border-radius: 1.5cqw;
+             padding: 1.8cqw 2.6cqw; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+             font-size: 2.6cqw; line-height: 1.3; box-shadow: 0 2.5cqw 5cqw -2cqw rgba(0,0,0,.55); text-align: left; }
+    .tweet-head { display: flex; align-items: center; gap: 1.4cqw; margin-bottom: 1cqw; font-size: 2.4cqw; white-space: nowrap; }
+    .tweet-avatar { flex: none; width: 4.6cqw; height: 4.6cqw; border-radius: 50%; background: #1d5fa0; color: #fff; display: grid; place-items: center; font-size: 3cqw; line-height: 1; }
+    .tweet-name { font-weight: 700; }
+    .tweet-verified { display: inline-block; width: 2.6cqw; height: 2.6cqw; border-radius: 50%; background: #1d9bf0; color: #fff; font-size: 1.7cqw; line-height: 2.6cqw; text-align: center; font-weight: 700; margin: 0 .5cqw 0 .3cqw; vertical-align: -0.35cqw; }
+    .tweet-meta { color: #536471; }
+    .tweet-body b { font-weight: 700; }
+    .tweet-body .at { color: #1d9bf0; }
+    @supports not (font-size: 1cqw) { .tweet { font-size: 12px; } }
 
     /* FAQ accordion — native details, styled */
     .faq summary::-webkit-details-marker { display: none; }
@@ -258,9 +274,13 @@
       <!-- Before / After -->
       <div class="mt-16 grid gap-10 lg:gap-16 sm:grid-cols-2 max-w-4xl mx-auto">
         <figure class="reveal">
-          <div class="relative aspect-[3/4] overflow-hidden bg-deep2 grade">
-            <img loading="lazy" decoding="async" src="images/opt/beau-poker-900.jpg" srcset="images/opt/beau-poker-400.webp 400w, images/opt/beau-poker-640.webp 640w, images/opt/beau-poker-720.webp 720w, images/opt/beau-poker-900.webp 900w" sizes="(min-width: 640px) 28rem, 92vw" width="1290" height="1728" alt="Beau at the World Poker Tour final table, with the WPT tweet announcing his 14th-place finish for $163,280" class="h-full w-full object-cover" onerror="this.style.display='none'" />
+          <div class="frame relative aspect-[3/4] overflow-hidden bg-deep2 grade">
+            <img loading="lazy" decoding="async" src="images/opt/beau-poker-900.jpg" srcset="images/opt/beau-poker-400.webp 400w, images/opt/beau-poker-640.webp 640w, images/opt/beau-poker-720.webp 720w, images/opt/beau-poker-900.webp 900w" sizes="(min-width: 640px) 28rem, 92vw" width="1290" height="1728" alt="Beau at the World Poker Tour final table" class="h-full w-full object-cover" onerror="this.style.display='none'" />
             <span class="pointer-events-none absolute inset-0 border border-cream/20" aria-hidden="true"></span>
+            <div class="tweet" role="figure" aria-label="World Poker Tour tweet, July 14, 2023">
+              <div class="tweet-head"><span class="tweet-avatar" aria-hidden="true">&#9824;</span><span><span class="tweet-name">World Poker Tour</span> <span class="tweet-verified" aria-hidden="true">&#10003;</span><span class="tweet-meta">@WPT &middot; Jul 14, 2023</span></span></div>
+              <div class="tweet-body">Down to 13 as <b>Beau Winn</b> leaves the field in 14th place after being eliminated by <span class="at">@SpaceyFCB</span> for $163,280.</div>
+            </div>
           </div>
           <figcaption class="mt-7">
             <p class="flex items-center gap-4"><span class="rule bg-sky/60"></span><span class="eyebrow !text-[.68rem] text-sky">3 Weeks Before My First Retreat</span></p>
