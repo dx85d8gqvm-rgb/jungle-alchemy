@@ -38,7 +38,7 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Montserrat:wght@600&family=Newsreader:ital,wght@0,400;1,400&display=swap" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript><link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Montserrat:wght@600&family=Newsreader:ital,wght@0,400;1,400&display=swap" rel="stylesheet" /></noscript>
 
-  <link rel="stylesheet" href="styles.css?v=20260816b" />
+  <link rel="stylesheet" href="styles.css?v=20260816c" />
 
   <style>
     :root { scroll-behavior: smooth; }
@@ -91,6 +91,9 @@
     .tweet-body b { font-weight: 700; }
     .tweet-body .at { color: #1d9bf0; }
     @supports not (font-size: 1cqw) { .tweet { font-size: 12px; } }
+
+    /* Instagram-style handles: system UI face (what Instagram renders in), no letterspacing */
+    .ig-handle { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: .82rem; font-weight: 600; letter-spacing: 0; }
 
     /* FAQ accordion — native details, styled */
     .faq summary::-webkit-details-marker { display: none; }
@@ -541,7 +544,7 @@
           <blockquote class="font-display text-xl sm:text-2xl text-cream leading-snug">&ldquo;My business had its best month immediately after working with Beau. He curated a holistic experience of yoga, meditation, and waterfalls. An incredible host.&rdquo;</blockquote>
           <figcaption class="mt-7 flex items-center gap-3.5">
             <img loading="lazy" decoding="async" src="images/opt/dave-128.jpg" srcset="images/opt/dave-96.webp 96w, images/opt/dave-128.webp 128w" sizes="44px" width="2195" height="2200" alt="Dave Robinson" class="h-11 w-11 rounded-full object-cover" />
-            <span><span class="block eyebrow !text-[.68rem] !tracking-[.18em] text-cream">Dave Robinson</span><span class="block mt-1 text-sky text-sm">@itsdaverobinson</span></span>
+            <span><span class="block eyebrow !text-[.68rem] !tracking-[.18em] text-cream">Dave Robinson</span><a href="https://instagram.com/itsdaverobinson" target="_blank" rel="noopener noreferrer" class="ig-handle block mt-1 text-sky hover:text-cream transition-colors">@itsdaverobinson</a></span>
           </figcaption>
         </figure>
 
@@ -549,7 +552,7 @@
           <blockquote class="font-display text-xl sm:text-2xl text-cream leading-snug">&ldquo;Beau has an incredible balance of love and discipline, and the nature in Costa Rica is unbelievable. His meditations recalibrated my mind and realigned me with my purpose.&rdquo;</blockquote>
           <figcaption class="mt-7 flex items-center gap-3.5">
             <img loading="lazy" decoding="async" src="images/opt/johnson-128.jpg" srcset="images/opt/johnson-96.webp 96w, images/opt/johnson-128.webp 128w" sizes="44px" width="2200" height="2192" alt="Johnson Xu" class="h-11 w-11 rounded-full object-cover" />
-            <span><span class="block eyebrow !text-[.68rem] !tracking-[.18em] text-cream">Johnson Xu</span><span class="block mt-1 text-sky text-sm">@movementhuman</span></span>
+            <span><span class="block eyebrow !text-[.68rem] !tracking-[.18em] text-cream">Johnson Xu</span><a href="https://instagram.com/movementhuman" target="_blank" rel="noopener noreferrer" class="ig-handle block mt-1 text-sky hover:text-cream transition-colors">@movementhuman</a></span>
           </figcaption>
         </figure>
 
@@ -557,7 +560,7 @@
           <blockquote class="font-display text-xl sm:text-2xl text-cream leading-snug">&ldquo;Beau has helped me feel so much clarity around my purpose, love life, and priorities. I highly recommend experiencing a session in person.&rdquo;</blockquote>
           <figcaption class="mt-7 flex items-center gap-3.5">
             <img loading="lazy" decoding="async" src="images/opt/jon-128.jpg" srcset="images/opt/jon-96.webp 96w, images/opt/jon-128.webp 128w" sizes="44px" width="2200" height="2187" alt="Jon Chenot" class="h-11 w-11 rounded-full object-cover" />
-            <span><span class="block eyebrow !text-[.68rem] !tracking-[.18em] text-cream">Jon Chenot</span><span class="block mt-1 text-sky text-sm">@aguabrah</span></span>
+            <span><span class="block eyebrow !text-[.68rem] !tracking-[.18em] text-cream">Jon Chenot</span><a href="https://instagram.com/aguabrah" target="_blank" rel="noopener noreferrer" class="ig-handle block mt-1 text-sky hover:text-cream transition-colors">@aguabrah</a></span>
           </figcaption>
         </figure>
       </div>
