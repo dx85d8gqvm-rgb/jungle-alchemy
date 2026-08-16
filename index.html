@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jungle Alchemy | A Costa Rica Retreat for Poker Players &amp; Entrepreneurs</title>
-  <meta name="description" content="Jungle Alchemy: 6 days and 7 nights in Uvita, Costa Rica for poker players & entrepreneurs. Yoga, meditation, surf, sound journeys, waterfalls. January 8–15, 2027. By application only." />
+  <meta name="description" content="Jungle Alchemy: six days in Uvita, Costa Rica for poker players & entrepreneurs. Yoga, meditation, surf, sound journeys, waterfalls. January 8–15, 2027. By application only." />
 
   <!-- Favicons -->
   <link rel="icon" href="/favicon.ico" sizes="any" />
@@ -80,6 +80,13 @@
     /* Film grain on dark sections — barely-there texture */
     .grain::after { content:""; position:absolute; inset:0; pointer-events:none; opacity:.035; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
 
+    /* FAQ accordion — native details, styled */
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq .faq-icon { transition: transform .35s ease; }
+    .faq[open] .faq-icon { transform: rotate(45deg); }
+    .faq summary:hover .font-display { color: #3D7396; }
+    .faq summary .font-display { transition: color .25s ease; }
+
     /* Nav — cream over the hero, ink once scrolled */
     #nav { --nav-fg: #F1ECD2; --nav-fg-dim: rgba(241,236,210,.75); }
     #nav.scrolled { --nav-fg: #12222C; --nav-fg-dim: rgba(18,34,44,.72); background-color: rgba(248,246,236,.92); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(18,34,44,.08); }
@@ -111,6 +118,7 @@
           <a href="#venue" class="nav-link eyebrow !tracking-[.18em] !text-[.72rem]">The Setting</a>
           <a href="rooms.html" class="nav-link eyebrow !tracking-[.18em] !text-[.72rem]">Rooms</a>
           <a href="#host" class="nav-link eyebrow !tracking-[.18em] !text-[.72rem]">Your Host</a>
+          <a href="#faq" class="nav-link eyebrow !tracking-[.18em] !text-[.72rem]">FAQ</a>
           <a href="https://tally.so/r/aQJJN2" target="_blank" rel="noopener noreferrer" class="nav-cta eyebrow !tracking-[.22em] !text-[.72rem] px-5 py-2.5">
             Apply
           </a>
@@ -129,6 +137,7 @@
         <a href="#venue" class="mobile-link eyebrow !tracking-[.2em]">The Setting</a>
         <a href="rooms.html" class="mobile-link eyebrow !tracking-[.2em]">Rooms</a>
         <a href="#host" class="mobile-link eyebrow !tracking-[.2em]">Your Host</a>
+        <a href="#faq" class="mobile-link eyebrow !tracking-[.2em]">FAQ</a>
         <a href="https://tally.so/r/aQJJN2" target="_blank" rel="noopener noreferrer" class="mobile-link btn-luxe btn-ink w-max !px-6 !py-3">Apply to Join</a>
       </div>
     </div>
@@ -196,7 +205,7 @@
           health, and your relationships.
         </p>
         <p>
-          Jungle Alchemy is a week to feel alive again. Six days in the Costa Rican jungle with a small
+          Jungle Alchemy is six days to feel alive again. Six days in the Costa Rican jungle with a small
           group of poker players and entrepreneurs who have been exactly where you are. You&rsquo;ll
           move, rest, eat well, and be fully present in a way the grind never allows. The friendships
           you make here are the kind you keep long after you fly home.
@@ -218,7 +227,7 @@
           <li class="flex items-baseline gap-4"><span class="suit text-azure">&#9824;</span><span>A real break from the grind</span></li>
           <li class="flex items-baseline gap-4"><span class="suit text-azure">&#9829;</span><span>To feel energized in your body &amp; mind</span></li>
           <li class="flex items-baseline gap-4"><span class="suit text-azure">&#9830;</span><span>New friendships with people who get you</span></li>
-          <li class="flex items-baseline gap-4"><span class="suit text-azure">&#9827;</span><span>A week of tropical vibes in the middle of winter</span></li>
+          <li class="flex items-baseline gap-4"><span class="suit text-azure">&#9827;</span><span>Six days of tropical vibes in the middle of winter</span></li>
           <li class="flex items-baseline gap-4"><span class="suit text-azure">&#9824;</span><span>Space to truly nourish, rest, and relax</span></li>
           <li class="flex items-baseline gap-4"><span class="suit text-azure">&#9829;</span><span>Time to let loose, have fun, and be yourself</span></li>
         </ul>
@@ -348,6 +357,52 @@
           <p class="mt-2.5 text-lg text-ink/70 leading-relaxed">Hammocks, the creek, unhurried afternoons. Space to hear yourself think again.</p>
         </article>
       </div>
+
+      <!-- A SAMPLE DAY -->
+      <div class="mt-24 grid lg:grid-cols-12 gap-10 lg:gap-16 items-start">
+        <div class="lg:col-span-4">
+          <p class="reveal flex items-center gap-4">
+            <span class="rule bg-azure/50"></span>
+            <span class="eyebrow text-azure">A Sample Day</span>
+          </p>
+          <h3 class="reveal mt-6 font-display text-3xl sm:text-4xl leading-[1.1]" style="transition-delay:.1s">The rhythm of a day <span class="italic">in the jungle.</span></h3>
+          <p class="reveal mt-5 text-lg text-ink/65 leading-relaxed" style="transition-delay:.15s">
+            Every day is a little different, and the exact schedule bends with the surf and the weather. But
+            this is the shape of it: movement in the morning, adventure or stillness midday, and long, easy
+            evenings.
+          </p>
+        </div>
+        <ol class="reveal lg:col-span-8 border-t border-ink/15" style="transition-delay:.2s">
+          <li class="grid grid-cols-[6.5rem_1fr] sm:grid-cols-[8rem_1fr] gap-x-6 py-5 border-b border-ink/10">
+            <span class="eyebrow !text-[.68rem] !tracking-[.2em] text-azure pt-1">6:30 am</span>
+            <div><p class="font-display text-xl">Sunrise yoga on the deck</p><p class="mt-1 text-ink/65">A slow flow above the canopy as the jungle wakes up. Optional, but most people come.</p></div>
+          </li>
+          <li class="grid grid-cols-[6.5rem_1fr] sm:grid-cols-[8rem_1fr] gap-x-6 py-5 border-b border-ink/10">
+            <span class="eyebrow !text-[.68rem] !tracking-[.2em] text-azure pt-1">8:00 am</span>
+            <div><p class="font-display text-xl">Breakfast</p><p class="mt-1 text-ink/65">Fresh fruit, eggs, good coffee, all of it organic and made on site.</p></div>
+          </li>
+          <li class="grid grid-cols-[6.5rem_1fr] sm:grid-cols-[8rem_1fr] gap-x-6 py-5 border-b border-ink/10">
+            <span class="eyebrow !text-[.68rem] !tracking-[.2em] text-azure pt-1">9:30 am</span>
+            <div><p class="font-display text-xl">The day&rsquo;s adventure</p><p class="mt-1 text-ink/65">Surf lesson at the beach, a waterfall trek, or a guided meditation. It changes daily.</p></div>
+          </li>
+          <li class="grid grid-cols-[6.5rem_1fr] sm:grid-cols-[8rem_1fr] gap-x-6 py-5 border-b border-ink/10">
+            <span class="eyebrow !text-[.68rem] !tracking-[.2em] text-azure pt-1">1:00 pm</span>
+            <div><p class="font-display text-xl">Lunch, then nothing</p><p class="mt-1 text-ink/65">The afternoon is yours. Hammock, creek, nap, a walk, or a mastermind conversation if you want one.</p></div>
+          </li>
+          <li class="grid grid-cols-[6.5rem_1fr] sm:grid-cols-[8rem_1fr] gap-x-6 py-5 border-b border-ink/10">
+            <span class="eyebrow !text-[.68rem] !tracking-[.2em] text-azure pt-1">4:30 pm</span>
+            <div><p class="font-display text-xl">Sound journey or breathwork</p><p class="mt-1 text-ink/65">Lie down, close your eyes, let the day settle.</p></div>
+          </li>
+          <li class="grid grid-cols-[6.5rem_1fr] sm:grid-cols-[8rem_1fr] gap-x-6 py-5 border-b border-ink/10">
+            <span class="eyebrow !text-[.68rem] !tracking-[.2em] text-azure pt-1">6:30 pm</span>
+            <div><p class="font-display text-xl">Dinner together</p><p class="mt-1 text-ink/65">One long table. This is where the friendships happen.</p></div>
+          </li>
+          <li class="grid grid-cols-[6.5rem_1fr] sm:grid-cols-[8rem_1fr] gap-x-6 py-5">
+            <span class="eyebrow !text-[.68rem] !tracking-[.2em] text-azure pt-1">8:00 pm</span>
+            <div><p class="font-display text-xl">Fire, music, or an early night</p><p class="mt-1 text-ink/65">Live music some nights, quiet ones on others. Sleep is part of the program.</p></div>
+          </li>
+        </ol>
+      </div>
     </div>
   </section>
 
@@ -424,14 +479,14 @@
       </div>
 
       <ul class="reveal mt-14 grid sm:grid-cols-2 gap-x-14 gap-y-5 text-cream/90 text-xl" style="transition-delay:.2s">
-        <li class="flex items-baseline gap-4 border-b border-cream/10 pb-4"><span class="suit text-sky">&#9824;</span><span>Accommodation for the week</span></li>
+        <li class="flex items-baseline gap-4 border-b border-cream/10 pb-4"><span class="suit text-sky">&#9824;</span><span>Accommodation for all six days</span></li>
         <li class="flex items-baseline gap-4 border-b border-cream/10 pb-4"><span class="suit text-sky">&#9829;</span><span>All meals</span></li>
         <li class="flex items-baseline gap-4 border-b border-cream/10 pb-4"><span class="suit text-sky">&#9830;</span><span>Every activity</span></li>
         <li class="flex items-baseline gap-4 border-b border-cream/10 pb-4"><span class="suit text-sky">&#9827;</span><span>Round-trip airport transfers</span></li>
         <li class="flex items-baseline gap-4 border-b border-cream/10 pb-4"><span class="suit text-sky">&#9824;</span><span>The Jungle Alchemy community</span></li>
         <li class="flex items-baseline gap-4 border-b border-cream/10 pb-4"><span class="suit text-sky">&#9829;</span><span>Pre-trip onboarding</span></li>
         <li class="flex items-baseline gap-4 border-b border-cream/10 pb-4"><span class="suit text-sky">&#9830;</span><span>A welcome gift</span></li>
-        <li class="flex items-baseline gap-4 border-b border-cream/10 pb-4"><span class="suit text-sky">&#9827;</span><span>Photos &amp; videos from the week</span></li>
+        <li class="flex items-baseline gap-4 border-b border-cream/10 pb-4"><span class="suit text-sky">&#9827;</span><span>Photos &amp; videos from the trip</span></li>
       </ul>
 
       <p class="reveal mt-10 text-center text-cream/50 text-lg leading-relaxed" style="transition-delay:.25s">
@@ -500,6 +555,10 @@
           <span class="rule bg-sky/50"></span>
         </p>
         <h2 class="reveal mt-7 font-display text-4xl sm:text-6xl text-cream leading-[1.08]" style="transition-delay:.1s">From people who&rsquo;ve worked with Beau.</h2>
+        <p class="reveal mt-6 text-lg text-cream/60 leading-relaxed" style="transition-delay:.15s">
+          This is the first time Jungle Alchemy is running as an open group. Here&rsquo;s what people have
+          said about private retreats in Costa Rica and working with Beau one-on-one.
+        </p>
       </div>
 
       <div class="mt-16 grid gap-10 md:grid-cols-3">
@@ -531,6 +590,114 @@
   </section>
 
   <!-- ============================================================ APPLY ============================================================ -->
+  <!-- ============================================================ FAQ ============================================================ -->
+  <section id="faq" class="relative bg-ivory py-28 sm:py-36">
+    <div class="mx-auto max-w-6xl px-5 sm:px-8 lg:px-12 grid lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+      <div class="lg:col-span-4 lg:sticky lg:top-28">
+        <p class="reveal flex items-center gap-4">
+          <span class="rule bg-azure/50"></span>
+          <span class="eyebrow text-azure">Good Questions</span>
+        </p>
+        <h2 class="reveal mt-6 font-display text-4xl sm:text-5xl leading-[1.08]" style="transition-delay:.1s">The things you&rsquo;re <span class="italic">probably wondering.</span></h2>
+        <p class="reveal mt-5 text-lg text-ink/65 leading-relaxed" style="transition-delay:.15s">Anything else, ask on the call.</p>
+      </div>
+
+      <div class="reveal lg:col-span-8 border-t border-ink/15" style="transition-delay:.2s">
+
+        <details class="faq group border-b border-ink/10">
+          <summary class="flex items-baseline justify-between gap-6 py-6 cursor-pointer list-none">
+            <span class="font-display text-2xl">Why Costa Rica?</span>
+            <span class="faq-icon text-azure text-2xl leading-none select-none" aria-hidden="true">+</span>
+          </summary>
+          <div class="pb-7 pr-10 text-lg text-ink/70 leading-relaxed">
+            <p>Because it&rsquo;s the opposite of a casino in every way that matters. Rainforest and Pacific instead of carpet and fluorescent light. Warm water and real waves. Organic food grown down the road. A slow pace, a safe and welcoming country, and, in January, the exact opposite climate to Las Vegas or wherever winter has you. It&rsquo;s where I found my own reset, and I haven&rsquo;t found anywhere better for it.</p>
+          </div>
+        </details>
+
+        <details class="faq group border-b border-ink/10">
+          <summary class="flex items-baseline justify-between gap-6 py-6 cursor-pointer list-none">
+            <span class="font-display text-2xl">Do I need yoga or meditation experience?</span>
+            <span class="faq-icon text-azure text-2xl leading-none select-none" aria-hidden="true">+</span>
+          </summary>
+          <div class="pb-7 pr-10 text-lg text-ink/70 leading-relaxed">
+            <p>No. Most people who come have little or none. Everything is taught from the ground up and adapted to whoever is in the room. If you can sit in a chair and breathe, you have all the prerequisites.</p>
+          </div>
+        </details>
+
+        <details class="faq group border-b border-ink/10">
+          <summary class="flex items-baseline justify-between gap-6 py-6 cursor-pointer list-none">
+            <span class="font-display text-2xl">Is this going to be woo-woo?</span>
+            <span class="faq-icon text-azure text-2xl leading-none select-none" aria-hidden="true">+</span>
+          </summary>
+          <div class="pb-7 pr-10 text-lg text-ink/70 leading-relaxed">
+            <p>No dogma, no jargon, nothing you have to believe in. Yoga is movement and breathing. Meditation is attention training. Sound journeys are an hour of lying down while someone plays instruments at you, and they&rsquo;re remarkable. Come skeptical. That&rsquo;s how I came.</p>
+          </div>
+        </details>
+
+        <details class="faq group border-b border-ink/10">
+          <summary class="flex items-baseline justify-between gap-6 py-6 cursor-pointer list-none">
+            <span class="font-display text-2xl">Who else is coming?</span>
+            <span class="faq-icon text-azure text-2xl leading-none select-none" aria-hidden="true">+</span>
+          </summary>
+          <div class="pb-7 pr-10 text-lg text-ink/70 leading-relaxed">
+            <p>Poker players and entrepreneurs, mostly in their late twenties to forties, who are doing well on paper and want to feel as good as their results look. The group is intentionally small and capped, and every person is accepted by application, so the room is people you&rsquo;ll actually want to know.</p>
+          </div>
+        </details>
+
+        <details class="faq group border-b border-ink/10">
+          <summary class="flex items-baseline justify-between gap-6 py-6 cursor-pointer list-none">
+            <span class="font-display text-2xl">Can I come alone?</span>
+            <span class="faq-icon text-azure text-2xl leading-none select-none" aria-hidden="true">+</span>
+          </summary>
+          <div class="pb-7 pr-10 text-lg text-ink/70 leading-relaxed">
+            <p>Most people do. You&rsquo;ll be a stranger for about a day. Couples and friends are welcome too, and can room together.</p>
+          </div>
+        </details>
+
+        <details class="faq group border-b border-ink/10">
+          <summary class="flex items-baseline justify-between gap-6 py-6 cursor-pointer list-none">
+            <span class="font-display text-2xl">Can I get a private room?</span>
+            <span class="faq-icon text-azure text-2xl leading-none select-none" aria-hidden="true">+</span>
+          </summary>
+          <div class="pb-7 pr-10 text-lg text-ink/70 leading-relaxed">
+            <p>Yes. Rooms range from private eco-luxury suites with en-suite bathrooms to comfortable shared spaces, all air-conditioned. We&rsquo;ll help you pick on the call. <a href="rooms.html" class="text-azure underline underline-offset-4 decoration-azure/40 hover:decoration-azure">See all the rooms.</a></p>
+          </div>
+        </details>
+
+        <details class="faq group border-b border-ink/10">
+          <summary class="flex items-baseline justify-between gap-6 py-6 cursor-pointer list-none">
+            <span class="font-display text-2xl">How do I get there?</span>
+            <span class="faq-icon text-azure text-2xl leading-none select-none" aria-hidden="true">+</span>
+          </summary>
+          <div class="pb-7 pr-10 text-lg text-ink/70 leading-relaxed">
+            <p>Fly into San Jos&eacute; (SJO). Direct flights run from most major US cities. From there it&rsquo;s a scenic drive of about three and a half hours down the Pacific coast to Uvita, and we handle it: round-trip transfers are included, so you land, find your driver, and the rest is on us.</p>
+          </div>
+        </details>
+
+        <details class="faq group border-b border-ink/10">
+          <summary class="flex items-baseline justify-between gap-6 py-6 cursor-pointer list-none">
+            <span class="font-display text-2xl">Is there wifi? Can I still work or play?</span>
+            <span class="faq-icon text-azure text-2xl leading-none select-none" aria-hidden="true">+</span>
+          </summary>
+          <div class="pb-7 pr-10 text-lg text-ink/70 leading-relaxed">
+            <p>There&rsquo;s wifi at the center, so you&rsquo;re reachable if you need to be. But the honest answer is that the six days work best when you let them. Afternoons are unscheduled, and how you use them is your call.</p>
+          </div>
+        </details>
+
+        <details class="faq group">
+          <summary class="flex items-baseline justify-between gap-6 py-6 cursor-pointer list-none">
+            <span class="font-display text-2xl">What happens after I apply?</span>
+            <span class="faq-icon text-azure text-2xl leading-none select-none" aria-hidden="true">+</span>
+          </summary>
+          <div class="pb-7 pr-10 text-lg text-ink/70 leading-relaxed">
+            <p>The application takes a few minutes and leads straight to booking a call with Beau. On the call you&rsquo;ll walk through the fit, the rooms, the details, and the investment. If it&rsquo;s a yes on both sides, you&rsquo;ll get everything you need to lock in your spot and start planning January.</p>
+          </div>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
   <section id="apply" class="relative py-32 sm:py-44 overflow-hidden bg-deep2 grade">
     <div class="absolute inset-0">
       <img src="images/venue-grounds.jpg" alt="The retreat center pavilion surrounded by jungle" class="h-full w-full object-cover" onerror="this.style.display='none'" />
@@ -546,7 +713,7 @@
       </p>
 
       <h2 class="reveal mt-8 font-display text-4xl sm:text-6xl text-white leading-[1.12]" style="transition-delay:.1s">
-        6 days and 7 nights in the jungle with other poker players &amp; entrepreneurs.<br/>
+        Six days in the jungle with other poker players &amp; entrepreneurs.<br/>
         <span class="italic text-cream">Feel alive again.</span>
       </h2>
 
