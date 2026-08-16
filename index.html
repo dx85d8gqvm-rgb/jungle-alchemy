@@ -6,6 +6,7 @@
   <title>Jungle Alchemy | A Costa Rica Retreat for Poker Players &amp; Entrepreneurs</title>
   <meta name="description" content="Jungle Alchemy: six days in Uvita, Costa Rica for poker players & entrepreneurs. Yoga, meditation, surf, sound journeys, waterfalls. January 8–15, 2027. By application only." />
 
+  <link rel="preload" as="image" imagesrcset="images/opt/hero-640.webp 640w, images/opt/hero-960.webp 960w, images/opt/hero-1280.webp 1280w, images/opt/hero-1800.webp 1800w" imagesizes="100vw" fetchpriority="high" />
   <!-- Favicons -->
   <link rel="icon" href="/favicon.ico" sizes="any" />
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
@@ -19,32 +20,10 @@
        ============================================================ -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Montserrat:wght@500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Montserrat:wght@600&family=Newsreader:ital,wght@0,400;1,400&display=swap" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Montserrat:wght@600&family=Newsreader:ital,wght@0,400;1,400&display=swap" rel="stylesheet" /></noscript>
 
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            ink:    '#12222C',   // near-black blue — text on light
-            deep:   '#16303F',   // deep ocean — dark sections
-            deep2:  '#0E2029',   // darkest — footer / overlays
-            azure:  '#3D7396',   // sea blue — accents on light
-            sky:    '#A7C9DD',   // pale sky — accents on dark
-            cream:  '#F1ECD2',   // pale cream — display type on dark
-            ivory:  '#F8F6EC',   // light background
-            sand:   '#E9E4D2',   // light card / hairline fill
-          },
-          fontFamily: {
-            display: ['"DM Serif Display"', 'serif'],
-            serif: ['Newsreader', 'serif'],
-            label: ['Montserrat', 'sans-serif'],
-          },
-        },
-      },
-    };
-  </script>
+  <link rel="stylesheet" href="styles.css?v=20260816" />
 
   <style>
     :root { scroll-behavior: smooth; }
@@ -86,6 +65,9 @@
     .faq[open] .faq-icon { transform: rotate(45deg); }
     .faq summary:hover .font-display { color: #3D7396; }
     .faq summary .font-display { transition: color .25s ease; }
+
+    /* Small screens: tighter label tracking, shorter flanking rules */
+    @media (max-width: 639px) { .eyebrow { letter-spacing: .24em; } .rule { width: 1.75rem; } .rule.sm-hide { display: none; } }
 
     /* Nav — cream over the hero, ink once scrolled */
     #nav { --nav-fg: #F1ECD2; --nav-fg-dim: rgba(241,236,210,.75); }
@@ -143,11 +125,13 @@
     </div>
   </header>
 
+  <main>
+
   <!-- ============================================================ HERO ============================================================ -->
   <section id="top" class="relative min-h-[100svh] flex items-center justify-center overflow-hidden bg-deep2 grade">
     <!-- HERO IMAGE — swap for the blue-sky beach shot from the carousel for a 1:1 match -->
     <div class="absolute inset-0">
-      <img src="images/hero.jpg"
+      <img fetchpriority="high" decoding="async" src="images/opt/hero-960.jpg" srcset="images/opt/hero-640.webp 640w, images/opt/hero-960.webp 960w, images/opt/hero-1280.webp 1280w, images/opt/hero-1800.webp 1800w" sizes="100vw" width="1800" height="1200"
            alt="The Pacific coastline and jungle near Uvita, Costa Rica"
            class="h-full w-full object-cover"
            onerror="this.style.display='none'" />
@@ -156,7 +140,7 @@
     <div class="absolute inset-0 bg-[#2A5A74] mix-blend-multiply opacity-50"></div>
     <div class="absolute inset-0 bg-gradient-to-b from-deep2/65 via-deep2/15 to-deep2/75"></div>
 
-    <div class="relative z-10 mx-auto max-w-4xl px-5 sm:px-8 w-full pt-28 pb-20 text-center">
+    <div class="relative z-10 mx-auto max-w-4xl px-5 sm:px-8 w-full pt-24 pb-14 sm:pt-28 sm:pb-20 text-center">
       <p class="reveal in flex items-center justify-center gap-4">
         <span class="rule bg-cream/60"></span>
         <span class="eyebrow text-cream">Jungle Alchemy</span>
@@ -167,7 +151,7 @@
         Costa Rica<br/>Retreat
       </h1>
 
-      <p class="mt-7 eyebrow !tracking-[.3em] text-white">For Poker Players &amp; Entrepreneurs</p>
+      <p class="mt-6 sm:mt-7 eyebrow !tracking-[.2em] sm:!tracking-[.3em] text-white">For Poker Players &amp; Entrepreneurs</p>
 
       <p class="mt-6 text-cream/90 text-xl tracking-[.5em] pl-[.5em]" aria-hidden="true">&#9824;&nbsp;&#9829;&nbsp;&#9830;&nbsp;&#9827;</p>
 
@@ -176,8 +160,8 @@
         <p class="eyebrow !tracking-[.26em] text-sky">January 8&ndash;15, 2027</p>
       </div>
 
-      <div class="mt-12 flex flex-col items-center gap-5">
-        <a href="https://tally.so/r/aQJJN2" target="_blank" rel="noopener noreferrer" class="btn-luxe btn-cream inline-block">
+      <div class="mt-10 sm:mt-12 flex flex-col items-center gap-4 sm:gap-5">
+        <a href="https://tally.so/r/aQJJN2" target="_blank" rel="noopener noreferrer" class="btn-luxe btn-cream block w-full sm:inline-block sm:w-auto text-center">
           Apply to Join
         </a>
         <p class="eyebrow !tracking-[.22em] !text-[.68rem] text-cream/70">By application only</p>
@@ -186,7 +170,7 @@
   </section>
 
   <!-- ============================================================ THE INVITATION ============================================================ -->
-  <section id="invitation" class="relative bg-ivory py-28 sm:py-36">
+  <section id="invitation" class="relative bg-ivory py-20 sm:py-28 lg:py-36">
     <div class="mx-auto max-w-3xl px-5 sm:px-8 text-center">
       <p class="reveal flex items-center justify-center gap-4">
         <span class="rule bg-azure/50"></span>
@@ -196,7 +180,7 @@
       <h2 class="reveal mt-7 font-display text-4xl sm:text-6xl leading-[1.08]" style="transition-delay:.1s">
         You&rsquo;ve optimized everything <span class="italic">except how you feel.</span>
       </h2>
-      <div class="reveal mx-auto mt-9 max-w-2xl space-y-6 text-xl leading-relaxed text-ink/75" style="transition-delay:.2s">
+      <div class="reveal mx-auto mt-8 sm:mt-9 max-w-2xl space-y-5 sm:space-y-6 text-lg sm:text-xl leading-relaxed text-ink/75 text-left sm:text-center" style="transition-delay:.2s">
         <p>
           You know the version of yourself that shows up at the table: sharp, patient, unreadable. You
           built that person carefully. What it cost is harder to see. Sessions that end late in the
@@ -216,8 +200,8 @@
   </section>
 
   <!-- ============================================================ THIS IS FOR YOU ============================================================ -->
-  <section class="relative bg-ivory pb-28 sm:pb-36">
-    <div class="mx-auto max-w-6xl px-5 sm:px-8 lg:px-12 grid lg:grid-cols-2 gap-14 lg:gap-20 items-center">
+  <section class="relative bg-ivory pb-20 sm:pb-28 lg:pb-36">
+    <div class="mx-auto max-w-6xl px-5 sm:px-8 lg:px-12 grid lg:grid-cols-2 gap-10 lg:gap-20 items-center">
       <div>
         <p class="reveal flex items-center gap-4">
           <span class="rule bg-azure/50"></span>
@@ -234,16 +218,16 @@
       </div>
       <div class="reveal" style="transition-delay:.15s">
         <div class="relative aspect-[4/3] bg-deep grade">
-          <img src="images/beach-palm.jpg" alt="A palm tree leaning over the beach in Uvita, Costa Rica" class="h-full w-full object-cover" onerror="this.style.display='none'" />
+          <img loading="lazy" decoding="async" src="images/opt/beach-palm-1024.jpg" srcset="images/opt/beach-palm-480.webp 480w, images/opt/beach-palm-640.webp 640w, images/opt/beach-palm-768.webp 768w, images/opt/beach-palm-1024.webp 1024w" sizes="(min-width: 1024px) 40vw, 92vw" width="1024" height="768" alt="A palm tree leaning over the beach in Uvita, Costa Rica" class="h-full w-full object-cover" onerror="this.style.display='none'" />
           <span class="pointer-events-none absolute inset-0 translate-x-3 translate-y-3 border border-azure/40" aria-hidden="true"></span>
         </div>
-        <p class="mt-5 eyebrow !text-[.62rem] !tracking-[.22em] text-ink/40 text-right">Playa Uvita &middot; Minutes from the center</p>
+        <p class="mt-5 eyebrow !text-[.62rem] !tracking-[.22em] text-ink/60 text-right">Playa Uvita &middot; Minutes from the center</p>
       </div>
     </div>
   </section>
 
   <!-- ============================================================ THE STORY — BEFORE / AFTER ============================================================ -->
-  <section class="relative bg-deep grain py-28 sm:py-36 overflow-hidden">
+  <section class="relative bg-deep grain py-20 sm:py-28 lg:py-36 overflow-hidden">
     <div class="relative mx-auto max-w-6xl px-5 sm:px-8 lg:px-12">
       <div class="text-center max-w-2xl mx-auto">
         <p class="reveal flex items-center justify-center gap-4">
@@ -257,10 +241,10 @@
       </div>
 
       <!-- Before / After -->
-      <div class="mt-16 grid gap-12 lg:gap-16 sm:grid-cols-2 max-w-4xl mx-auto">
+      <div class="mt-16 grid gap-10 lg:gap-16 sm:grid-cols-2 max-w-4xl mx-auto">
         <figure class="reveal">
           <div class="relative aspect-[3/4] overflow-hidden bg-deep2 grade">
-            <img src="images/beau-poker.jpg" alt="Beau at the World Poker Tour final table, with the WPT tweet announcing his 14th-place finish for $163,280" class="h-full w-full object-cover" onerror="this.style.display='none'" />
+            <img loading="lazy" decoding="async" src="images/opt/beau-poker-900.jpg" srcset="images/opt/beau-poker-400.webp 400w, images/opt/beau-poker-640.webp 640w, images/opt/beau-poker-720.webp 720w, images/opt/beau-poker-900.webp 900w" sizes="(min-width: 640px) 28rem, 92vw" width="1290" height="1728" alt="Beau at the World Poker Tour final table, with the WPT tweet announcing his 14th-place finish for $163,280" class="h-full w-full object-cover" onerror="this.style.display='none'" />
             <span class="pointer-events-none absolute inset-0 border border-cream/20" aria-hidden="true"></span>
           </div>
           <figcaption class="mt-7">
@@ -276,7 +260,7 @@
 
         <figure class="reveal" style="transition-delay:.15s">
           <div class="relative aspect-[3/4] overflow-hidden bg-deep2 grade">
-            <img src="images/beau-alive.jpg" alt="Beau on the beach in Costa Rica, arms raised" class="h-full w-full object-cover" onerror="this.style.display='none'" />
+            <img loading="lazy" decoding="async" src="images/opt/beau-alive-900.jpg" srcset="images/opt/beau-alive-400.webp 400w, images/opt/beau-alive-640.webp 640w, images/opt/beau-alive-720.webp 720w, images/opt/beau-alive-900.webp 900w" sizes="(min-width: 640px) 28rem, 92vw" width="1400" height="1867" alt="Beau on the beach in Costa Rica, arms raised" class="h-full w-full object-cover" onerror="this.style.display='none'" />
             <span class="pointer-events-none absolute inset-0 border border-cream/20" aria-hidden="true"></span>
           </div>
           <figcaption class="mt-7">
@@ -292,16 +276,16 @@
       </div>
 
       <div class="reveal mx-auto mt-14 max-w-2xl text-center" style="transition-delay:.2s">
-        <p class="text-sky/90 text-2xl leading-relaxed font-display italic">
+        <p class="text-sky/90 text-xl sm:text-2xl leading-relaxed font-display italic">
           &ldquo;A retreat is the greatest investment I ever made in my life. I finally felt what it was like to be healthy &amp; energetic.&rdquo;
         </p>
-        <p class="mt-4 eyebrow !text-[.68rem] !tracking-[.24em] text-cream/60">Beau Winn</p>
+        <p class="mt-4 eyebrow !text-[.68rem] !tracking-[.24em] text-cream/80">Beau Winn</p>
       </div>
     </div>
   </section>
 
   <!-- ============================================================ THE EXPERIENCE ============================================================ -->
-  <section id="experience" class="relative bg-ivory py-28 sm:py-36">
+  <section id="experience" class="relative bg-ivory py-20 sm:py-28 lg:py-36">
     <div class="mx-auto max-w-6xl px-5 sm:px-8 lg:px-12">
       <div class="max-w-2xl">
         <p class="reveal flex items-center gap-4">
@@ -309,59 +293,59 @@
           <span class="eyebrow text-azure">The Experience</span>
         </p>
         <h2 class="reveal mt-6 font-display text-4xl sm:text-6xl leading-[1.08]" style="transition-delay:.1s">Six days, designed to <span class="italic">restore you.</span></h2>
-        <p class="reveal mt-6 text-xl text-ink/70 leading-relaxed" style="transition-delay:.2s">
+        <p class="reveal mt-6 text-lg sm:text-xl text-ink/70 leading-relaxed" style="transition-delay:.2s">
           Movement and stillness in equal measure. Nothing is packed too tight. This is a retreat,
           not a bootcamp.
         </p>
       </div>
 
-      <div class="mt-16 grid sm:grid-cols-2 gap-x-14">
-        <article class="reveal border-t border-ink/15 py-8">
+      <div class="mt-12 sm:mt-16 grid sm:grid-cols-2 gap-x-14">
+        <article class="reveal border-t border-ink/15 py-6 sm:py-8">
           <p class="eyebrow !text-[.68rem] text-azure">01 &middot; &#9824;</p>
-          <h3 class="mt-3 font-display text-3xl">Yoga &amp; Movement</h3>
-          <p class="mt-2.5 text-lg text-ink/70 leading-relaxed">Sunrise flows on an open-air deck above the canopy. All levels, zero pressure.</p>
+          <h3 class="mt-3 font-display text-2xl sm:text-3xl">Yoga &amp; Movement</h3>
+          <p class="mt-2 sm:mt-2.5 text-base sm:text-lg text-ink/70 leading-relaxed">Sunrise flows on an open-air deck above the canopy. All levels, zero pressure.</p>
         </article>
-        <article class="reveal border-t border-ink/15 py-8" style="transition-delay:.05s">
+        <article class="reveal border-t border-ink/15 py-6 sm:py-8" style="transition-delay:.05s">
           <p class="eyebrow !text-[.68rem] text-azure">02 &middot; &#9829;</p>
-          <h3 class="mt-3 font-display text-3xl">Meditation</h3>
-          <p class="mt-2.5 text-lg text-ink/70 leading-relaxed">Learn to still the mind that&rsquo;s been running the numbers for years. Clarity is an edge.</p>
+          <h3 class="mt-3 font-display text-2xl sm:text-3xl">Meditation</h3>
+          <p class="mt-2 sm:mt-2.5 text-base sm:text-lg text-ink/70 leading-relaxed">Learn to still the mind that&rsquo;s been running the numbers for years. Clarity is an edge.</p>
         </article>
-        <article class="reveal border-t border-ink/15 py-8" style="transition-delay:.1s">
+        <article class="reveal border-t border-ink/15 py-6 sm:py-8" style="transition-delay:.1s">
           <p class="eyebrow !text-[.68rem] text-azure">03 &middot; &#9830;</p>
-          <h3 class="mt-3 font-display text-3xl">Surfing</h3>
-          <p class="mt-2.5 text-lg text-ink/70 leading-relaxed">Warm Pacific waves, whether it&rsquo;s your first time or your hundredth.</p>
+          <h3 class="mt-3 font-display text-2xl sm:text-3xl">Surfing</h3>
+          <p class="mt-2 sm:mt-2.5 text-base sm:text-lg text-ink/70 leading-relaxed">Warm Pacific waves, whether it&rsquo;s your first time or your hundredth.</p>
         </article>
-        <article class="reveal border-t border-ink/15 py-8" style="transition-delay:.15s">
+        <article class="reveal border-t border-ink/15 py-6 sm:py-8" style="transition-delay:.15s">
           <p class="eyebrow !text-[.68rem] text-azure">04 &middot; &#9827;</p>
-          <h3 class="mt-3 font-display text-3xl">Sound Journeys</h3>
-          <p class="mt-2.5 text-lg text-ink/70 leading-relaxed">Lie back, close your eyes, and let the bowls and gongs carry the reset.</p>
+          <h3 class="mt-3 font-display text-2xl sm:text-3xl">Sound Journeys</h3>
+          <p class="mt-2 sm:mt-2.5 text-base sm:text-lg text-ink/70 leading-relaxed">Lie back, close your eyes, and let the bowls and gongs carry the reset.</p>
         </article>
-        <article class="reveal border-t border-ink/15 py-8" style="transition-delay:.2s">
+        <article class="reveal border-t border-ink/15 py-6 sm:py-8" style="transition-delay:.2s">
           <p class="eyebrow !text-[.68rem] text-azure">05 &middot; &#9824;</p>
-          <h3 class="mt-3 font-display text-3xl">Live Music</h3>
-          <p class="mt-2.5 text-lg text-ink/70 leading-relaxed">Fireside jams and the kind of nights that turn into stories for years.</p>
+          <h3 class="mt-3 font-display text-2xl sm:text-3xl">Live Music</h3>
+          <p class="mt-2 sm:mt-2.5 text-base sm:text-lg text-ink/70 leading-relaxed">Fireside jams and the kind of nights that turn into stories for years.</p>
         </article>
-        <article class="reveal border-t border-ink/15 py-8" style="transition-delay:.25s">
+        <article class="reveal border-t border-ink/15 py-6 sm:py-8" style="transition-delay:.25s">
           <p class="eyebrow !text-[.68rem] text-azure">06 &middot; &#9829;</p>
-          <h3 class="mt-3 font-display text-3xl">Waterfall Adventures</h3>
-          <p class="mt-2.5 text-lg text-ink/70 leading-relaxed">Trek into the jungle and swim in hidden pools that leave you feeling brand new.</p>
+          <h3 class="mt-3 font-display text-2xl sm:text-3xl">Waterfall Adventures</h3>
+          <p class="mt-2 sm:mt-2.5 text-base sm:text-lg text-ink/70 leading-relaxed">Trek into the jungle and swim in hidden pools that leave you feeling brand new.</p>
         </article>
-        <article class="reveal border-t border-ink/15 py-8" style="transition-delay:.3s">
+        <article class="reveal border-t border-ink/15 py-6 sm:py-8" style="transition-delay:.3s">
           <p class="eyebrow !text-[.68rem] text-azure">07 &middot; &#9830;</p>
-          <h3 class="mt-3 font-display text-3xl">Masterminds</h3>
-          <p class="mt-2.5 text-lg text-ink/70 leading-relaxed">Focused conversations with sharp people on habits, purpose, and what you&rsquo;re building next.</p>
+          <h3 class="mt-3 font-display text-2xl sm:text-3xl">Masterminds</h3>
+          <p class="mt-2 sm:mt-2.5 text-base sm:text-lg text-ink/70 leading-relaxed">Focused conversations with sharp people on habits, purpose, and what you&rsquo;re building next.</p>
         </article>
-        <article class="reveal border-t border-ink/15 py-8" style="transition-delay:.35s">
+        <article class="reveal border-t border-ink/15 py-6 sm:py-8" style="transition-delay:.35s">
           <p class="eyebrow !text-[.68rem] text-azure">08 &middot; &#9827;</p>
-          <h3 class="mt-3 font-display text-3xl">Time to Relax</h3>
-          <p class="mt-2.5 text-lg text-ink/70 leading-relaxed">Hammocks, the creek, unhurried afternoons. Space to hear yourself think again.</p>
+          <h3 class="mt-3 font-display text-2xl sm:text-3xl">Time to Relax</h3>
+          <p class="mt-2 sm:mt-2.5 text-base sm:text-lg text-ink/70 leading-relaxed">Hammocks, the creek, unhurried afternoons. Space to hear yourself think again.</p>
         </article>
       </div>
     </div>
   </section>
 
   <!-- ============================================================ THE SETTING ============================================================ -->
-  <section id="venue" class="relative bg-sand/40 py-28 sm:py-36">
+  <section id="venue" class="relative bg-sand/40 py-20 sm:py-28 lg:py-36">
     <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
       <div class="max-w-2xl">
         <p class="reveal flex items-center gap-4">
@@ -369,32 +353,32 @@
           <span class="eyebrow text-azure">The Setting</span>
         </p>
         <h2 class="reveal mt-6 font-display text-4xl sm:text-6xl leading-[1.08]" style="transition-delay:.1s">An award-winning eco-luxury center in the jungle.</h2>
-        <p class="reveal mt-6 text-xl text-ink/70 leading-relaxed" style="transition-delay:.2s">
+        <p class="reveal mt-6 text-lg sm:text-xl text-ink/70 leading-relaxed" style="transition-delay:.2s">
           Open-air architecture, a 360&deg; yoga deck lifted into the canopy, gourmet organic meals, and
           beautifully crafted suites in the heart of Uvita, minutes from the Pacific. It slows you
           down the moment you arrive.
         </p>
       </div>
 
-      <div class="mt-14 grid gap-3 sm:grid-cols-2 sm:grid-rows-2 sm:h-[540px]">
+      <div class="mt-10 sm:mt-14 grid gap-3 sm:grid-cols-2 sm:grid-rows-2 sm:h-[540px]">
         <figure class="reveal group relative h-64 sm:h-auto sm:row-span-2 overflow-hidden bg-deep grade">
-          <img src="images/venue-yoga-deck.jpg" alt="The 360-degree open-air yoga deck at the retreat center in Uvita" class="h-full w-full object-cover transition-transform duration-[1.4s] ease-out group-hover:scale-[1.04]" onerror="this.style.display='none'" />
+          <img loading="lazy" decoding="async" src="images/opt/venue-yoga-deck-960.jpg" srcset="images/opt/venue-yoga-deck-640.webp 640w, images/opt/venue-yoga-deck-960.webp 960w, images/opt/venue-yoga-deck-1280.webp 1280w" sizes="(min-width: 640px) 50vw, 100vw" width="2200" height="1466" alt="The 360-degree open-air yoga deck at the retreat center in Uvita" class="h-full w-full object-cover transition-transform duration-[1.4s] ease-out group-hover:scale-[1.04]" onerror="this.style.display='none'" />
           <div class="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-deep2/75 to-transparent"></div>
           <figcaption class="absolute bottom-5 left-6 eyebrow !text-[.68rem] text-cream">The Yoga Deck</figcaption>
         </figure>
         <figure class="reveal group relative h-48 sm:h-auto overflow-hidden bg-deep grade" style="transition-delay:.1s">
-          <img src="images/venue-suite.jpg" alt="An eco-luxury suite at the retreat center" class="h-full w-full object-cover transition-transform duration-[1.4s] ease-out group-hover:scale-[1.04]" style="object-position: 28% 50%;" onerror="this.style.display='none'" />
+          <img loading="lazy" decoding="async" src="images/opt/venue-suite-960.jpg" srcset="images/opt/venue-suite-640.webp 640w, images/opt/venue-suite-960.webp 960w, images/opt/venue-suite-1280.webp 1280w" sizes="(min-width: 640px) 50vw, 100vw" width="2200" height="1466" alt="An eco-luxury suite at the retreat center" class="h-full w-full object-cover transition-transform duration-[1.4s] ease-out group-hover:scale-[1.04]" style="object-position: 28% 50%;" onerror="this.style.display='none'" />
           <div class="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-deep2/75 to-transparent"></div>
           <figcaption class="absolute bottom-5 left-6 eyebrow !text-[.68rem] text-cream">The Suites</figcaption>
         </figure>
         <figure class="reveal group relative h-48 sm:h-auto overflow-hidden bg-deep grade" style="transition-delay:.2s">
-          <img src="home%205.jpg" alt="The main pavilion of the retreat center" class="h-full w-full object-cover transition-transform duration-[1.4s] ease-out group-hover:scale-[1.04]" onerror="this.style.display='none'" />
+          <img loading="lazy" decoding="async" src="images/opt/home-5-960.jpg" srcset="images/opt/home-5-640.webp 640w, images/opt/home-5-960.webp 960w, images/opt/home-5-1280.webp 1280w" sizes="(min-width: 640px) 50vw, 100vw" width="2000" height="1332" alt="The main pavilion of the retreat center" class="h-full w-full object-cover transition-transform duration-[1.4s] ease-out group-hover:scale-[1.04]" onerror="this.style.display='none'" />
           <div class="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-deep2/75 to-transparent"></div>
           <figcaption class="absolute bottom-5 left-6 eyebrow !text-[.68rem] text-cream">The Center</figcaption>
         </figure>
       </div>
 
-      <div class="mt-14 grid gap-x-10 gap-y-8 sm:grid-cols-2 lg:grid-cols-4">
+      <div class="mt-10 sm:mt-14 grid gap-x-10 gap-y-6 sm:gap-y-8 sm:grid-cols-2 lg:grid-cols-4">
         <div class="reveal border-t border-ink/15 pt-5">
           <h3 class="eyebrow !text-[.7rem] text-ink">Eco-Luxury Suites</h3>
           <p class="mt-2 text-ink/65 leading-relaxed">En-suite, air-conditioned rooms crafted from local materials.</p>
@@ -414,13 +398,13 @@
       </div>
 
       <div class="reveal mt-14 flex justify-center" style="transition-delay:.3s">
-        <a href="rooms.html" class="btn-luxe btn-ink inline-block">View the Rooms</a>
+        <a href="rooms.html" class="btn-luxe btn-ink block w-full sm:inline-block sm:w-auto text-center">View the Rooms</a>
       </div>
     </div>
   </section>
 
   <!-- ============================================================ INCLUDED ============================================================ -->
-  <section id="included" class="relative bg-deep grain py-28 sm:py-36 overflow-hidden">
+  <section id="included" class="relative bg-deep grain py-20 sm:py-28 lg:py-36 overflow-hidden">
     <div class="relative mx-auto max-w-4xl px-5 sm:px-8 lg:px-12">
       <div class="text-center max-w-2xl mx-auto">
         <p class="reveal flex items-center justify-center gap-4">
@@ -429,10 +413,10 @@
           <span class="rule bg-sky/50"></span>
         </p>
         <h2 class="reveal mt-7 font-display text-4xl sm:text-6xl text-cream leading-[1.08]" style="transition-delay:.1s">What&rsquo;s included.</h2>
-        <p class="reveal mt-5 text-lg text-cream/60 leading-relaxed" style="transition-delay:.15s">From the moment you land, it&rsquo;s all taken care of.</p>
+        <p class="reveal mt-5 text-lg text-cream/70 leading-relaxed" style="transition-delay:.15s">From the moment you land, it&rsquo;s all taken care of.</p>
       </div>
 
-      <ul class="reveal mt-14 grid sm:grid-cols-2 gap-x-14 gap-y-5 text-cream/90 text-xl" style="transition-delay:.2s">
+      <ul class="reveal mt-10 sm:mt-14 grid sm:grid-cols-2 gap-x-14 gap-y-4 sm:gap-y-5 text-cream/90 text-lg sm:text-xl" style="transition-delay:.2s">
         <li class="flex items-baseline gap-4 border-b border-cream/10 pb-4"><span class="suit text-sky">&#9824;</span><span>Accommodation for all six days</span></li>
         <li class="flex items-baseline gap-4 border-b border-cream/10 pb-4"><span class="suit text-sky">&#9829;</span><span>All meals</span></li>
         <li class="flex items-baseline gap-4 border-b border-cream/10 pb-4"><span class="suit text-sky">&#9830;</span><span>Every activity</span></li>
@@ -443,33 +427,33 @@
         <li class="flex items-baseline gap-4 border-b border-cream/10 pb-4"><span class="suit text-sky">&#9827;</span><span>Photos &amp; videos from the trip</span></li>
       </ul>
 
-      <p class="reveal mt-10 text-center text-cream/50 text-lg leading-relaxed" style="transition-delay:.25s">
+      <p class="reveal mt-10 text-center text-cream/70 text-lg leading-relaxed" style="transition-delay:.25s">
         The only thing you book yourself is your flight to San Jos&eacute; (SJO). We handle the rest.
       </p>
     </div>
   </section>
 
   <!-- ============================================================ HOST ============================================================ -->
-  <section id="host" class="relative bg-ivory py-28 sm:py-36">
-    <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12 grid lg:grid-cols-2 gap-16 items-start">
-      <div class="reveal order-2 lg:order-1">
+  <section id="host" class="relative bg-ivory py-20 sm:py-28 lg:py-36">
+    <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12 grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
+      <div class="reveal order-1">
         <div class="relative aspect-[4/5] max-w-md bg-deep grade">
           <div class="absolute inset-0 grid place-items-center">
             <span class="font-display text-7xl text-cream/30">BW</span>
           </div>
-          <img src="images/beau.jpg" alt="Beau Winn, your host for Jungle Alchemy" class="relative h-full w-full object-cover object-center" onerror="this.style.display='none'" />
+          <img loading="lazy" decoding="async" src="images/opt/beau-720.jpg" srcset="images/opt/beau-480.webp 480w, images/opt/beau-720.webp 720w, images/opt/beau-886.webp 886w" sizes="(min-width: 1024px) 28rem, 100vw" width="886" height="1107" alt="Beau Winn, your host for Jungle Alchemy" class="relative h-full w-full object-cover" onerror="this.style.display='none'" />
           <span class="pointer-events-none absolute inset-0 translate-x-3 translate-y-3 border border-azure/40" aria-hidden="true"></span>
         </div>
       </div>
 
-      <div class="order-1 lg:order-2">
+      <div class="order-2">
         <p class="reveal flex items-center gap-4">
           <span class="rule bg-azure/50"></span>
           <span class="eyebrow text-azure">Your Host</span>
         </p>
         <h2 class="reveal mt-6 font-display text-5xl sm:text-6xl" style="transition-delay:.1s">Beau Winn</h2>
         <p class="reveal mt-4 eyebrow !text-[.7rem] text-ink/55" style="transition-delay:.15s">Former Poker Pro &middot; Meditation &amp; Yoga Teacher</p>
-        <div class="reveal mt-8 space-y-6 text-xl text-ink/75 leading-relaxed max-w-xl" style="transition-delay:.2s">
+        <div class="reveal mt-8 space-y-6 text-lg sm:text-xl text-ink/75 leading-relaxed max-w-xl" style="transition-delay:.2s">
           <p>
             I spent years grinding from the low stakes to the highest levels of professional poker. I
             learned how to perform under pressure and keep my cool when it counted most.
@@ -489,7 +473,7 @@
             invited me on when I was a poker player.
           </p>
         </div>
-        <a href="https://tally.so/r/aQJJN2" target="_blank" rel="noopener noreferrer" class="reveal btn-luxe btn-ink mt-10 inline-block" style="transition-delay:.25s">
+        <a href="https://tally.so/r/aQJJN2" target="_blank" rel="noopener noreferrer" class="reveal btn-luxe btn-ink mt-10 block w-full sm:inline-block sm:w-auto text-center" style="transition-delay:.25s">
           Apply Now
         </a>
       </div>
@@ -497,7 +481,7 @@
   </section>
 
   <!-- ============================================================ TESTIMONIALS ============================================================ -->
-  <section class="relative bg-deep grain py-28 sm:py-36 overflow-hidden">
+  <section class="relative bg-deep grain py-20 sm:py-28 lg:py-36 overflow-hidden">
     <!-- Quiet atmosphere: a soft sky glow and an oversized, barely-there quote mark -->
     <div class="absolute inset-0" style="background: radial-gradient(55% 45% at 50% 0%, rgba(167,201,221,.09), transparent 65%);" aria-hidden="true"></div>
     <span class="pointer-events-none select-none absolute -top-16 left-1/2 -translate-x-1/2 font-display text-[24rem] leading-none text-cream/[0.05]" aria-hidden="true">&ldquo;</span>
@@ -509,34 +493,34 @@
           <span class="rule bg-sky/50"></span>
         </p>
         <h2 class="reveal mt-7 font-display text-4xl sm:text-6xl text-cream leading-[1.08]" style="transition-delay:.1s">From people who&rsquo;ve worked with Beau.</h2>
-        <p class="reveal mt-6 text-lg text-cream/60 leading-relaxed" style="transition-delay:.15s">
+        <p class="reveal mt-6 text-lg text-cream/75 leading-relaxed" style="transition-delay:.15s">
           This is the first time Jungle Alchemy is running as an open group. Here&rsquo;s what people have
           said about private retreats in Costa Rica and working with Beau one-on-one.
         </p>
       </div>
 
-      <div class="mt-16 grid gap-10 md:grid-cols-3">
+      <div class="mt-16 grid gap-9 md:gap-10 md:grid-cols-3">
         <figure class="reveal border-t border-cream/25 pt-8">
-          <blockquote class="font-display text-2xl text-cream leading-snug">&ldquo;My business had its best month immediately after working with Beau. He curated a holistic experience of yoga, meditation, and waterfalls. An incredible host.&rdquo;</blockquote>
+          <blockquote class="font-display text-xl sm:text-2xl text-cream leading-snug">&ldquo;My business had its best month immediately after working with Beau. He curated a holistic experience of yoga, meditation, and waterfalls. An incredible host.&rdquo;</blockquote>
           <figcaption class="mt-7 flex items-center gap-3.5">
-            <img src="images/dave.jpg" alt="Dave Robinson" class="h-11 w-11 rounded-full object-cover" />
-            <span><span class="block eyebrow !text-[.68rem] !tracking-[.18em] text-cream">Dave Robinson</span><span class="block mt-1 text-sky/70 text-sm">@itsdaverobinson</span></span>
+            <img loading="lazy" decoding="async" src="images/opt/dave-128.jpg" srcset="images/opt/dave-96.webp 96w, images/opt/dave-128.webp 128w" sizes="44px" width="2195" height="2200" alt="Dave Robinson" class="h-11 w-11 rounded-full object-cover" />
+            <span><span class="block eyebrow !text-[.68rem] !tracking-[.18em] text-cream">Dave Robinson</span><span class="block mt-1 text-sky text-sm">@itsdaverobinson</span></span>
           </figcaption>
         </figure>
 
         <figure class="reveal border-t border-cream/25 pt-8" style="transition-delay:.12s">
-          <blockquote class="font-display text-2xl text-cream leading-snug">&ldquo;Beau has an incredible balance of love and discipline, and the nature in Costa Rica is unbelievable. His meditations recalibrated my mind and realigned me with my purpose.&rdquo;</blockquote>
+          <blockquote class="font-display text-xl sm:text-2xl text-cream leading-snug">&ldquo;Beau has an incredible balance of love and discipline, and the nature in Costa Rica is unbelievable. His meditations recalibrated my mind and realigned me with my purpose.&rdquo;</blockquote>
           <figcaption class="mt-7 flex items-center gap-3.5">
-            <img src="images/johnson.jpg" alt="Johnson Xu" class="h-11 w-11 rounded-full object-cover" />
-            <span><span class="block eyebrow !text-[.68rem] !tracking-[.18em] text-cream">Johnson Xu</span><span class="block mt-1 text-sky/70 text-sm">@movementhuman</span></span>
+            <img loading="lazy" decoding="async" src="images/opt/johnson-128.jpg" srcset="images/opt/johnson-96.webp 96w, images/opt/johnson-128.webp 128w" sizes="44px" width="2200" height="2192" alt="Johnson Xu" class="h-11 w-11 rounded-full object-cover" />
+            <span><span class="block eyebrow !text-[.68rem] !tracking-[.18em] text-cream">Johnson Xu</span><span class="block mt-1 text-sky text-sm">@movementhuman</span></span>
           </figcaption>
         </figure>
 
         <figure class="reveal border-t border-cream/25 pt-8" style="transition-delay:.24s">
-          <blockquote class="font-display text-2xl text-cream leading-snug">&ldquo;Beau has helped me feel so much clarity around my purpose, love life, and priorities. I highly recommend experiencing a session in person.&rdquo;</blockquote>
+          <blockquote class="font-display text-xl sm:text-2xl text-cream leading-snug">&ldquo;Beau has helped me feel so much clarity around my purpose, love life, and priorities. I highly recommend experiencing a session in person.&rdquo;</blockquote>
           <figcaption class="mt-7 flex items-center gap-3.5">
-            <img src="images/jon.jpg" alt="Jon Chenot" class="h-11 w-11 rounded-full object-cover" />
-            <span><span class="block eyebrow !text-[.68rem] !tracking-[.18em] text-cream">Jon Chenot</span><span class="block mt-1 text-sky/70 text-sm">@aguabrah</span></span>
+            <img loading="lazy" decoding="async" src="images/opt/jon-128.jpg" srcset="images/opt/jon-96.webp 96w, images/opt/jon-128.webp 128w" sizes="44px" width="2200" height="2187" alt="Jon Chenot" class="h-11 w-11 rounded-full object-cover" />
+            <span><span class="block eyebrow !text-[.68rem] !tracking-[.18em] text-cream">Jon Chenot</span><span class="block mt-1 text-sky text-sm">@aguabrah</span></span>
           </figcaption>
         </figure>
       </div>
@@ -545,7 +529,7 @@
 
   <!-- ============================================================ APPLY ============================================================ -->
   <!-- ============================================================ FAQ ============================================================ -->
-  <section id="faq" class="relative bg-ivory py-28 sm:py-36">
+  <section id="faq" class="relative bg-ivory py-20 sm:py-28 lg:py-36">
     <div class="mx-auto max-w-6xl px-5 sm:px-8 lg:px-12 grid lg:grid-cols-12 gap-12 lg:gap-16 items-start">
       <div class="lg:col-span-4 lg:sticky lg:top-28">
         <p class="reveal flex items-center gap-4">
@@ -559,111 +543,111 @@
       <div class="reveal lg:col-span-8 border-t border-ink/15" style="transition-delay:.2s">
 
         <details class="faq group border-b border-ink/10">
-          <summary class="flex items-baseline justify-between gap-6 py-6 cursor-pointer list-none">
-            <span class="font-display text-2xl">Why Costa Rica?</span>
+          <summary class="flex items-baseline justify-between gap-6 py-5 sm:py-6 cursor-pointer list-none">
+            <span class="font-display text-xl sm:text-2xl pr-2">Why Costa Rica?</span>
             <span class="faq-icon text-azure text-2xl leading-none select-none" aria-hidden="true">+</span>
           </summary>
-          <div class="pb-7 pr-10 text-lg text-ink/70 leading-relaxed">
+          <div class="pb-6 sm:pb-7 pr-2 sm:pr-10 text-base sm:text-lg text-ink/70 leading-relaxed">
             <p>Costa Rica is lush, tropical, peaceful, and calm. Rainforest and Pacific instead of carpet and fluorescent lights found in a casino. Warm water waves. Organic food grown down the road. A safe and welcoming country. It&rsquo;s the best place I&rsquo;ve found for a reset, especially when it starts to get cold during USA winter.</p>
           </div>
         </details>
 
         <details class="faq group border-b border-ink/10">
-          <summary class="flex items-baseline justify-between gap-6 py-6 cursor-pointer list-none">
-            <span class="font-display text-2xl">Do I need yoga or surfing experience?</span>
+          <summary class="flex items-baseline justify-between gap-6 py-5 sm:py-6 cursor-pointer list-none">
+            <span class="font-display text-xl sm:text-2xl pr-2">Do I need yoga or surfing experience?</span>
             <span class="faq-icon text-azure text-2xl leading-none select-none" aria-hidden="true">+</span>
           </summary>
-          <div class="pb-7 pr-10 text-lg text-ink/70 leading-relaxed">
+          <div class="pb-6 sm:pb-7 pr-2 sm:pr-10 text-base sm:text-lg text-ink/70 leading-relaxed">
             <p>No. Most people who come have little or none. Everything is taught from the ground up and adapted to whoever is in the room.</p>
           </div>
         </details>
 
         <details class="faq group border-b border-ink/10">
-          <summary class="flex items-baseline justify-between gap-6 py-6 cursor-pointer list-none">
-            <span class="font-display text-2xl">Is this going to be woo-woo?</span>
+          <summary class="flex items-baseline justify-between gap-6 py-5 sm:py-6 cursor-pointer list-none">
+            <span class="font-display text-xl sm:text-2xl pr-2">Is this going to be woo-woo?</span>
             <span class="faq-icon text-azure text-2xl leading-none select-none" aria-hidden="true">+</span>
           </summary>
-          <div class="pb-7 pr-10 text-lg text-ink/70 leading-relaxed">
+          <div class="pb-6 sm:pb-7 pr-2 sm:pr-10 text-base sm:text-lg text-ink/70 leading-relaxed">
             <p>No. This is a grounded event focused on you having an incredible time.</p>
           </div>
         </details>
 
         <details class="faq group border-b border-ink/10">
-          <summary class="flex items-baseline justify-between gap-6 py-6 cursor-pointer list-none">
-            <span class="font-display text-2xl">What does a day look like?</span>
+          <summary class="flex items-baseline justify-between gap-6 py-5 sm:py-6 cursor-pointer list-none">
+            <span class="font-display text-xl sm:text-2xl pr-2">What does a day look like?</span>
             <span class="faq-icon text-azure text-2xl leading-none select-none" aria-hidden="true">+</span>
           </summary>
-          <div class="pb-7 pr-10 text-lg text-ink/70 leading-relaxed">
+          <div class="pb-6 sm:pb-7 pr-2 sm:pr-10 text-base sm:text-lg text-ink/70 leading-relaxed">
             <p>Every day is a little different, but this is the shape of it. We&rsquo;ll start most days with a mix of yoga, breathwork, and meditation, then breakfast. Late morning is the group excursion: waterfall adventures, group hike, or the farmer&rsquo;s market. Lunch, then time to relax in the creek. Afternoons bring sound journeys or surfing at sunset at the beach, followed by dinner and an evening activity. Nothing is packed too tight.</p>
           </div>
         </details>
 
         <details class="faq group border-b border-ink/10">
-          <summary class="flex items-baseline justify-between gap-6 py-6 cursor-pointer list-none">
-            <span class="font-display text-2xl">Will there be alcohol?</span>
+          <summary class="flex items-baseline justify-between gap-6 py-5 sm:py-6 cursor-pointer list-none">
+            <span class="font-display text-xl sm:text-2xl pr-2">Will there be alcohol?</span>
             <span class="faq-icon text-azure text-2xl leading-none select-none" aria-hidden="true">+</span>
           </summary>
-          <div class="pb-7 pr-10 text-lg text-ink/70 leading-relaxed">
+          <div class="pb-6 sm:pb-7 pr-2 sm:pr-10 text-base sm:text-lg text-ink/70 leading-relaxed">
             <p>No. There won&rsquo;t be alcohol, but there will be fresh coconut water and organic fruit smoothies.</p>
           </div>
         </details>
 
         <details class="faq group border-b border-ink/10">
-          <summary class="flex items-baseline justify-between gap-6 py-6 cursor-pointer list-none">
-            <span class="font-display text-2xl">Will there be poker strategy discussions?</span>
+          <summary class="flex items-baseline justify-between gap-6 py-5 sm:py-6 cursor-pointer list-none">
+            <span class="font-display text-xl sm:text-2xl pr-2">Will there be poker strategy discussions?</span>
             <span class="faq-icon text-azure text-2xl leading-none select-none" aria-hidden="true">+</span>
           </summary>
-          <div class="pb-7 pr-10 text-lg text-ink/70 leading-relaxed">
+          <div class="pb-6 sm:pb-7 pr-2 sm:pr-10 text-base sm:text-lg text-ink/70 leading-relaxed">
             <p>No, there will not be intentional time set to discuss poker strategy. This event is designed for you to take a break from the grind, although guests are welcome to discuss strategy with each other if they feel called. Guests are also welcome to discuss strategy or career related questions with Beau during the downtime.</p>
           </div>
         </details>
 
         <details class="faq group border-b border-ink/10">
-          <summary class="flex items-baseline justify-between gap-6 py-6 cursor-pointer list-none">
-            <span class="font-display text-2xl">Can I come alone?</span>
+          <summary class="flex items-baseline justify-between gap-6 py-5 sm:py-6 cursor-pointer list-none">
+            <span class="font-display text-xl sm:text-2xl pr-2">Can I come alone?</span>
             <span class="faq-icon text-azure text-2xl leading-none select-none" aria-hidden="true">+</span>
           </summary>
-          <div class="pb-7 pr-10 text-lg text-ink/70 leading-relaxed">
+          <div class="pb-6 sm:pb-7 pr-2 sm:pr-10 text-base sm:text-lg text-ink/70 leading-relaxed">
             <p>Yes, it&rsquo;s encouraged! Couples and friends are also welcome, and can room together.</p>
           </div>
         </details>
 
         <details class="faq group border-b border-ink/10">
-          <summary class="flex items-baseline justify-between gap-6 py-6 cursor-pointer list-none">
-            <span class="font-display text-2xl">Can I get a private room?</span>
+          <summary class="flex items-baseline justify-between gap-6 py-5 sm:py-6 cursor-pointer list-none">
+            <span class="font-display text-xl sm:text-2xl pr-2">Can I get a private room?</span>
             <span class="faq-icon text-azure text-2xl leading-none select-none" aria-hidden="true">+</span>
           </summary>
-          <div class="pb-7 pr-10 text-lg text-ink/70 leading-relaxed">
+          <div class="pb-6 sm:pb-7 pr-2 sm:pr-10 text-base sm:text-lg text-ink/70 leading-relaxed">
             <p>Yes. Rooms range from private eco-luxury suites with en-suite bathrooms to comfortable shared spaces, all air-conditioned. We&rsquo;ll help you pick on the call. <a href="rooms.html" class="text-azure underline underline-offset-4 decoration-azure/40 hover:decoration-azure">See all the rooms.</a></p>
           </div>
         </details>
 
         <details class="faq group border-b border-ink/10">
-          <summary class="flex items-baseline justify-between gap-6 py-6 cursor-pointer list-none">
-            <span class="font-display text-2xl">How do I get there?</span>
+          <summary class="flex items-baseline justify-between gap-6 py-5 sm:py-6 cursor-pointer list-none">
+            <span class="font-display text-xl sm:text-2xl pr-2">How do I get there?</span>
             <span class="faq-icon text-azure text-2xl leading-none select-none" aria-hidden="true">+</span>
           </summary>
-          <div class="pb-7 pr-10 text-lg text-ink/70 leading-relaxed">
+          <div class="pb-6 sm:pb-7 pr-2 sm:pr-10 text-base sm:text-lg text-ink/70 leading-relaxed">
             <p>Fly into San Jos&eacute; (SJO). Direct flights run from most major US cities. Everything is handled from there. We&rsquo;ll have a private shuttle take you to the retreat center.</p>
           </div>
         </details>
 
         <details class="faq group border-b border-ink/10">
-          <summary class="flex items-baseline justify-between gap-6 py-6 cursor-pointer list-none">
-            <span class="font-display text-2xl">Is there wifi? Can I still work or play?</span>
+          <summary class="flex items-baseline justify-between gap-6 py-5 sm:py-6 cursor-pointer list-none">
+            <span class="font-display text-xl sm:text-2xl pr-2">Is there wifi? Can I still work or play?</span>
             <span class="faq-icon text-azure text-2xl leading-none select-none" aria-hidden="true">+</span>
           </summary>
-          <div class="pb-7 pr-10 text-lg text-ink/70 leading-relaxed">
+          <div class="pb-6 sm:pb-7 pr-2 sm:pr-10 text-base sm:text-lg text-ink/70 leading-relaxed">
             <p>Yes, there&rsquo;s wifi. And you&rsquo;ll have plenty of downtime to chill in a hammock, enjoy the creek on the property, or be online.</p>
           </div>
         </details>
 
         <details class="faq group">
-          <summary class="flex items-baseline justify-between gap-6 py-6 cursor-pointer list-none">
-            <span class="font-display text-2xl">What happens after I apply?</span>
+          <summary class="flex items-baseline justify-between gap-6 py-5 sm:py-6 cursor-pointer list-none">
+            <span class="font-display text-xl sm:text-2xl pr-2">What happens after I apply?</span>
             <span class="faq-icon text-azure text-2xl leading-none select-none" aria-hidden="true">+</span>
           </summary>
-          <div class="pb-7 pr-10 text-lg text-ink/70 leading-relaxed">
+          <div class="pb-6 sm:pb-7 pr-2 sm:pr-10 text-base sm:text-lg text-ink/70 leading-relaxed">
             <p>The application takes a few minutes and leads straight to booking a call with Beau. On the call you&rsquo;ll walk through the fit, the rooms, the details, and the investment. If it&rsquo;s a yes on both sides, you&rsquo;ll get everything you need to lock in your spot and start planning January.</p>
             <p class="mt-5"><a href="https://tally.so/r/aQJJN2" target="_blank" rel="noopener noreferrer" class="btn-luxe btn-ink inline-block !py-3.5 !px-8">Apply Now</a></p>
           </div>
@@ -673,18 +657,18 @@
     </div>
   </section>
 
-  <section id="apply" class="relative py-32 sm:py-44 overflow-hidden bg-deep2 grade">
+  <section id="apply" class="relative py-24 sm:py-32 lg:py-44 overflow-hidden bg-deep2 grade">
     <div class="absolute inset-0">
-      <img src="images/venue-grounds.jpg" alt="The retreat center pavilion surrounded by jungle" class="h-full w-full object-cover" onerror="this.style.display='none'" />
+      <img loading="lazy" decoding="async" src="images/opt/venue-grounds-960.jpg" srcset="images/opt/venue-grounds-640.webp 640w, images/opt/venue-grounds-960.webp 960w, images/opt/venue-grounds-1280.webp 1280w, images/opt/venue-grounds-1600.webp 1600w" sizes="100vw" width="2160" height="1439" alt="The retreat center pavilion surrounded by jungle" class="h-full w-full object-cover" onerror="this.style.display='none'" />
     </div>
     <div class="absolute inset-0 bg-[#2A5A74] mix-blend-multiply opacity-45"></div>
     <div class="absolute inset-0 bg-gradient-to-b from-deep2/70 via-deep2/35 to-deep2/80"></div>
 
     <div class="relative mx-auto max-w-3xl px-5 sm:px-8 text-center">
       <p class="reveal flex items-center justify-center gap-4">
-        <span class="rule bg-cream/60"></span>
-        <span class="eyebrow text-cream">January 8&ndash;15, 2027 &middot; Uvita, Costa Rica</span>
-        <span class="rule bg-cream/60"></span>
+        <span class="rule sm-hide bg-cream/60"></span>
+        <span class="eyebrow text-cream text-center">January 8&ndash;15, 2027 &middot; Uvita, Costa Rica</span>
+        <span class="rule sm-hide bg-cream/60"></span>
       </p>
 
       <h2 class="reveal mt-8 font-display text-4xl sm:text-6xl text-white leading-[1.12]" style="transition-delay:.1s">
@@ -695,17 +679,19 @@
       <p class="reveal mt-10 eyebrow !tracking-[.26em] text-white" style="transition-delay:.2s">By Application Only</p>
 
       <div class="reveal mt-7" style="transition-delay:.25s">
-        <p class="inline-block border border-cream/70 px-7 py-3.5 eyebrow !tracking-[.24em] text-cream">Early Bird Pricing Ends September 30th</p>
+        <p class="inline-block border border-cream/70 px-5 sm:px-7 py-3.5 eyebrow !tracking-[.16em] sm:!tracking-[.24em] text-cream text-center">Early Bird Pricing Ends September 30th</p>
       </div>
 
       <div class="reveal mt-12 flex flex-col items-center gap-5" style="transition-delay:.3s">
-        <a href="https://tally.so/r/aQJJN2" target="_blank" rel="noopener noreferrer" class="btn-luxe btn-solid inline-block">
+        <a href="https://tally.so/r/aQJJN2" target="_blank" rel="noopener noreferrer" class="btn-luxe btn-solid block w-full sm:inline-block sm:w-auto text-center">
           Apply to Join
         </a>
         <p class="text-cream/70 text-lg italic">Fill out a short application, then book a call with Beau right after. On the call you&rsquo;ll walk through the fit, the details, and the investment.</p>
       </div>
     </div>
   </section>
+
+  </main>
 
   <!-- ============================================================ FOOTER ============================================================ -->
   <footer class="bg-deep2 py-16">
@@ -717,11 +703,11 @@
           </span>
           <div>
             <span class="block font-display text-cream text-lg tracking-wide">Jungle Alchemy</span>
-            <span class="block mt-0.5 eyebrow !text-[.62rem] !tracking-[.22em] text-cream/45">Uvita, Costa Rica &middot; January 8&ndash;15, 2027</span>
+            <span class="block mt-0.5 eyebrow !text-[.62rem] !tracking-[.22em] text-cream/75">Uvita, Costa Rica &middot; January 8&ndash;15, 2027</span>
           </div>
         </div>
 
-        <div class="flex items-center gap-7 text-cream/60">
+        <div class="flex items-center gap-7 text-cream/75">
           <a href="https://instagram.com/thebeauwinn" target="_blank" rel="noopener noreferrer" aria-label="Beau on Instagram" class="hover:text-cream transition-colors">
             <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="3.5"/><circle cx="17" cy="7" r="1" fill="currentColor" stroke="none"/></svg>
           </a>
@@ -729,9 +715,9 @@
         </div>
       </div>
 
-      <div class="mt-12 pt-8 border-t border-cream/10 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-cream/35">
+      <div class="mt-10 sm:mt-12 pt-8 border-t border-cream/10 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-cream/70">
         <p>&copy; 2026 Jungle Alchemy &middot; hosted by Beau Winn &middot; junglealchemyretreats.com</p>
-        <p class="font-display italic text-lg text-sky/60">Feel alive again.</p>
+        <p class="font-display italic text-lg text-sky">Feel alive again.</p>
       </div>
     </div>
   </footer>

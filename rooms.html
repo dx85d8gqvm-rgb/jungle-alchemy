@@ -6,6 +6,7 @@
   <title>The Venue &amp; Rooms | Jungle Alchemy | Uvita, Costa Rica</title>
   <meta name="description" content="Nine eco-luxury suites and beautiful common spaces at Jungle Alchemy's private retreat center in Uvita, Costa Rica. Find your home in the jungle." />
 
+  <link rel="preload" as="image" imagesrcset="images/opt/home-5-640.webp 640w, images/opt/home-5-960.webp 960w, images/opt/home-5-1280.webp 1280w" imagesizes="100vw" fetchpriority="high" />
   <!-- Favicons -->
   <link rel="icon" href="/favicon.ico" sizes="any" />
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
@@ -15,32 +16,10 @@
   <!-- FONTS — DM Serif Display + Newsreader + Montserrat -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Montserrat:wght@500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Montserrat:wght@600&family=Newsreader:ital,wght@0,400;1,400&display=swap" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Montserrat:wght@600&family=Newsreader:ital,wght@0,400;1,400&display=swap" rel="stylesheet" /></noscript>
 
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            ink:    '#12222C',
-            deep:   '#16303F',
-            deep2:  '#0E2029',
-            azure:  '#3D7396',
-            sky:    '#A7C9DD',
-            cream:  '#F1ECD2',
-            ivory:  '#F8F6EC',
-            sand:   '#E9E4D2',
-          },
-          fontFamily: {
-            display: ['"DM Serif Display"', 'serif'],
-            serif: ['Newsreader', 'serif'],
-            label: ['Montserrat', 'sans-serif'],
-          },
-        },
-      },
-    };
-  </script>
+  <link rel="stylesheet" href="styles.css?v=20260816" />
 
   <style>
     :root { scroll-behavior: smooth; }
@@ -71,6 +50,9 @@
     .thumb { border: 1px solid rgba(18,34,44,.12); opacity: .85; transition: border-color .25s ease, opacity .25s ease; }
     .thumb.is-active { border-color: #3D7396; opacity: 1; }
     .thumb:hover { opacity: 1; }
+
+    /* Small screens: tighter label tracking, shorter flanking rules */
+    @media (max-width: 639px) { .eyebrow { letter-spacing: .24em; } .rule { width: 1.75rem; } .rule.sm-hide { display: none; } }
 
     /* Nav — cream over the hero, ink once scrolled */
     #nav { --nav-fg: #F1ECD2; --nav-fg-dim: rgba(241,236,210,.75); }
@@ -107,10 +89,12 @@
     </nav>
   </header>
 
+  <main>
+
   <!-- ============================================================ HERO ============================================================ -->
   <section class="relative min-h-[76svh] flex items-center justify-center overflow-hidden bg-deep2 grade">
     <div class="absolute inset-0">
-      <img src="home%205.jpg" alt="The eco-luxury retreat center surrounded by jungle in Uvita, Costa Rica" class="h-full w-full object-cover" onerror="this.style.display='none'" />
+      <img fetchpriority="high" decoding="async" src="images/opt/home-5-960.jpg" srcset="images/opt/home-5-640.webp 640w, images/opt/home-5-960.webp 960w, images/opt/home-5-1280.webp 1280w" sizes="100vw" width="2000" height="1332" alt="The eco-luxury retreat center surrounded by jungle in Uvita, Costa Rica" class="h-full w-full object-cover" onerror="this.style.display='none'" />
     </div>
     <div class="absolute inset-0 bg-[#2A5A74] mix-blend-multiply opacity-45"></div>
     <div class="absolute inset-0 bg-gradient-to-b from-deep2/70 via-deep2/25 to-deep2/75"></div>
@@ -136,7 +120,7 @@
   </section>
 
   <!-- ============================================================ INTRO ============================================================ -->
-  <section id="rooms" class="relative bg-ivory pt-24 sm:pt-32 pb-6">
+  <section id="rooms" class="relative bg-ivory pt-20 sm:pt-28 lg:pt-32 pb-6">
     <div class="mx-auto max-w-3xl px-5 sm:px-8 text-center">
       <p class="reveal flex items-center justify-center gap-4">
         <span class="rule bg-azure/50"></span>
@@ -157,23 +141,23 @@
   <!-- ============================================================ ROOMS ============================================================ -->
 
   <!-- 1 · LUNA MASTER SUITE — image left -->
-  <section class="relative bg-ivory py-16 sm:py-24">
-    <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12 grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+  <section class="relative bg-ivory py-12 sm:py-16 lg:py-24">
+    <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12 grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
       <div class="reveal" data-gallery>
         <div class="relative overflow-hidden bg-deep grade aspect-[4/3]">
-          <img data-main class="h-full w-full object-cover transition-opacity duration-300" src="LM2.jpg" alt="Luna Master Suite" />
+          <img loading="lazy" decoding="async" data-main class="h-full w-full object-cover transition-opacity duration-300" src="images/opt/lm2-800.jpg" srcset="images/opt/lm2-480.webp 480w, images/opt/lm2-800.webp 800w, images/opt/lm2-1200.webp 1200w" sizes="(min-width: 1024px) 50vw, 100vw" width="2200" height="1466" alt="Luna Master Suite" />
         </div>
         <div class="mt-3 flex gap-3">
-          <button class="thumb is-active flex-1 aspect-[4/3] overflow-hidden" data-src="LM2.jpg" aria-label="Photo 1"><img class="h-full w-full object-cover" src="LM2.jpg" alt="" loading="lazy" /></button>
-          <button class="thumb flex-1 aspect-[4/3] overflow-hidden" data-src="LM1.jpg" aria-label="Photo 2"><img class="h-full w-full object-cover" src="LM1.jpg" alt="" loading="lazy" /></button>
-          <button class="thumb flex-1 aspect-[4/3] overflow-hidden" data-src="LM3.jpg" aria-label="Photo 3"><img class="h-full w-full object-cover" src="LM3.jpg" alt="" loading="lazy" /></button>
+          <button class="thumb is-active flex-1 aspect-[4/3] overflow-hidden" data-src="images/opt/lm2-800.jpg" data-srcset="images/opt/lm2-480.webp 480w, images/opt/lm2-800.webp 800w, images/opt/lm2-1200.webp 1200w" aria-label="Photo 1"><img decoding="async" class="h-full w-full object-cover" src="images/opt/lm2-480.webp" width="2200" height="1466" alt="" loading="lazy" /></button>
+          <button class="thumb flex-1 aspect-[4/3] overflow-hidden" data-src="images/opt/lm1-800.jpg" data-srcset="images/opt/lm1-480.webp 480w, images/opt/lm1-800.webp 800w, images/opt/lm1-1200.webp 1200w" aria-label="Photo 2"><img decoding="async" class="h-full w-full object-cover" src="images/opt/lm1-480.webp" width="2200" height="1466" alt="" loading="lazy" /></button>
+          <button class="thumb flex-1 aspect-[4/3] overflow-hidden" data-src="images/opt/lm3-800.jpg" data-srcset="images/opt/lm3-480.webp 480w, images/opt/lm3-800.webp 800w, images/opt/lm3-1200.webp 1200w" aria-label="Photo 3"><img decoding="async" class="h-full w-full object-cover" src="images/opt/lm3-480.webp" width="2200" height="1466" alt="" loading="lazy" /></button>
         </div>
       </div>
       <div class="reveal">
         <p class="flex items-center gap-4"><span class="rule bg-azure/50"></span><span class="eyebrow !text-[.7rem] text-azure">No. 01 &middot; Premium Luxury</span></p>
-        <h3 class="mt-4 font-display text-4xl sm:text-5xl leading-[1.05]">Luna Master Suite</h3>
+        <h3 class="mt-4 font-display text-3xl sm:text-5xl leading-[1.05]">Luna Master Suite</h3>
         <p class="mt-3 font-display italic text-lg text-azure">California King &middot; Private Bathroom &middot; Private Balcony</p>
-        <p class="mt-5 text-lg text-ink/70 leading-relaxed">The Luna Suite offers two stories with a king bed, private balcony, and a spacious layout. Features include a luxury en-suite bathroom, air conditioning, and sweeping nature views for a peaceful stay.</p>
+        <p class="mt-4 sm:mt-5 text-base sm:text-lg text-ink/70 leading-relaxed">The Luna Suite offers two stories with a king bed, private balcony, and a spacious layout. Features include a luxury en-suite bathroom, air conditioning, and sweeping nature views for a peaceful stay.</p>
         <ul class="mt-7 grid sm:grid-cols-2 gap-x-8 gap-y-3 text-ink/80 text-lg">
           <li class="flex items-baseline gap-3"><span class="suit text-azure">&#9824;</span>Two-story layout</li>
           <li class="flex items-baseline gap-3"><span class="suit text-azure">&#9829;</span>King bed</li>
@@ -186,13 +170,13 @@
   </section>
 
   <!-- 2 · LUXURY SUITES — image right -->
-  <section class="relative bg-sand/40 py-16 sm:py-24">
-    <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12 grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+  <section class="relative bg-sand/40 py-12 sm:py-16 lg:py-24">
+    <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12 grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
       <div class="reveal order-2 lg:order-1">
         <p class="flex items-center gap-4"><span class="rule bg-azure/50"></span><span class="eyebrow !text-[.7rem] text-azure">No. 02 &middot; The Suites</span></p>
-        <h3 class="mt-4 font-display text-4xl sm:text-5xl leading-[1.05]">Luxury Suites</h3>
+        <h3 class="mt-4 font-display text-3xl sm:text-5xl leading-[1.05]">Luxury Suites</h3>
         <p class="mt-3 font-display italic text-lg text-azure">Queen Bed &middot; En-suite Bathroom &middot; Private Outdoor Space</p>
-        <p class="mt-5 text-lg text-ink/70 leading-relaxed">Each of our nine new luxury suites is equipped with a queen bed, en-suite bathroom, air conditioning, and private outdoor space.</p>
+        <p class="mt-4 sm:mt-5 text-base sm:text-lg text-ink/70 leading-relaxed">Each of our nine new luxury suites is equipped with a queen bed, en-suite bathroom, air conditioning, and private outdoor space.</p>
         <ul class="mt-7 grid sm:grid-cols-2 gap-x-8 gap-y-3 text-ink/80 text-lg">
           <li class="flex items-baseline gap-3"><span class="suit text-azure">&#9824;</span>Queen bed</li>
           <li class="flex items-baseline gap-3"><span class="suit text-azure">&#9829;</span>En-suite bathroom</li>
@@ -202,35 +186,35 @@
       </div>
       <div class="reveal order-1 lg:order-2" data-gallery>
         <div class="relative overflow-hidden bg-deep grade aspect-[4/3]">
-          <img data-main class="h-full w-full object-cover transition-opacity duration-300" src="Luxury%20Queen%20suites%20-%20Queen%20bed%20private%20bathroom%20-%20deck%20--%20Synergy%20(31).jpg" alt="Luxury Suites" />
+          <img loading="lazy" decoding="async" data-main class="h-full w-full object-cover transition-opacity duration-300" src="images/opt/luxury-queen-suites-queen-bed-private-bathroom-deck-synergy-31-800.jpg" srcset="images/opt/luxury-queen-suites-queen-bed-private-bathroom-deck-synergy-31-480.webp 480w, images/opt/luxury-queen-suites-queen-bed-private-bathroom-deck-synergy-31-800.webp 800w, images/opt/luxury-queen-suites-queen-bed-private-bathroom-deck-synergy-31-1200.webp 1200w" sizes="(min-width: 1024px) 50vw, 100vw" width="2200" height="1466" alt="Luxury Suites" />
         </div>
         <div class="mt-3 flex gap-3">
-          <button class="thumb is-active flex-1 aspect-[4/3] overflow-hidden" data-src="Luxury%20Queen%20suites%20-%20Queen%20bed%20private%20bathroom%20-%20deck%20--%20Synergy%20(31).jpg" aria-label="Photo 1"><img class="h-full w-full object-cover" src="Luxury%20Queen%20suites%20-%20Queen%20bed%20private%20bathroom%20-%20deck%20--%20Synergy%20(31).jpg" alt="" loading="lazy" /></button>
-          <button class="thumb flex-1 aspect-[4/3] overflow-hidden" data-src="The%20Village%20%20surrounded%20by%209%20Luxury%20Queen%20suites%20%20(18).jpg" aria-label="Photo 2"><img class="h-full w-full object-cover" src="The%20Village%20%20surrounded%20by%209%20Luxury%20Queen%20suites%20%20(18).jpg" alt="" loading="lazy" /></button>
-          <button class="thumb flex-1 aspect-[4/3] overflow-hidden" data-src="4.jpg" aria-label="Photo 3"><img class="h-full w-full object-cover" src="4.jpg" alt="" loading="lazy" /></button>
+          <button class="thumb is-active flex-1 aspect-[4/3] overflow-hidden" data-src="images/opt/luxury-queen-suites-queen-bed-private-bathroom-deck-synergy-31-800.jpg" data-srcset="images/opt/luxury-queen-suites-queen-bed-private-bathroom-deck-synergy-31-480.webp 480w, images/opt/luxury-queen-suites-queen-bed-private-bathroom-deck-synergy-31-800.webp 800w, images/opt/luxury-queen-suites-queen-bed-private-bathroom-deck-synergy-31-1200.webp 1200w" aria-label="Photo 1"><img decoding="async" class="h-full w-full object-cover" src="images/opt/luxury-queen-suites-queen-bed-private-bathroom-deck-synergy-31-480.webp" width="2200" height="1466" alt="" loading="lazy" /></button>
+          <button class="thumb flex-1 aspect-[4/3] overflow-hidden" data-src="images/opt/the-village-surrounded-by-9-luxury-queen-suites-18-800.jpg" data-srcset="images/opt/the-village-surrounded-by-9-luxury-queen-suites-18-480.webp 480w, images/opt/the-village-surrounded-by-9-luxury-queen-suites-18-800.webp 800w, images/opt/the-village-surrounded-by-9-luxury-queen-suites-18-1200.webp 1200w" aria-label="Photo 2"><img decoding="async" class="h-full w-full object-cover" src="images/opt/the-village-surrounded-by-9-luxury-queen-suites-18-480.webp" width="2200" height="1466" alt="" loading="lazy" /></button>
+          <button class="thumb flex-1 aspect-[4/3] overflow-hidden" data-src="images/opt/4-800.jpg" data-srcset="images/opt/4-480.webp 480w, images/opt/4-800.webp 800w, images/opt/4-1200.webp 1200w" aria-label="Photo 3"><img decoding="async" class="h-full w-full object-cover" src="images/opt/4-480.webp" width="2200" height="1466" alt="" loading="lazy" /></button>
         </div>
       </div>
     </div>
   </section>
 
   <!-- 3 · MANGO COTTAGE SUITE — image left -->
-  <section class="relative bg-ivory py-16 sm:py-24">
-    <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12 grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+  <section class="relative bg-ivory py-12 sm:py-16 lg:py-24">
+    <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12 grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
       <div class="reveal" data-gallery>
         <div class="relative overflow-hidden bg-deep grade aspect-[4/3]">
-          <img data-main class="h-full w-full object-cover transition-opacity duration-300" src="Mango%201.jpg" alt="Mango Cottage Suite" />
+          <img loading="lazy" decoding="async" data-main class="h-full w-full object-cover transition-opacity duration-300" src="images/opt/mango-1-800.jpg" srcset="images/opt/mango-1-480.webp 480w, images/opt/mango-1-800.webp 800w, images/opt/mango-1-1200.webp 1200w" sizes="(min-width: 1024px) 50vw, 100vw" width="2200" height="1466" alt="Mango Cottage Suite" />
         </div>
         <div class="mt-3 flex gap-3">
-          <button class="thumb is-active flex-1 aspect-[4/3] overflow-hidden" data-src="Mango%201.jpg" aria-label="Photo 1"><img class="h-full w-full object-cover" src="Mango%201.jpg" alt="" loading="lazy" /></button>
-          <button class="thumb flex-1 aspect-[4/3] overflow-hidden" data-src="mango%202.jpg" aria-label="Photo 2"><img class="h-full w-full object-cover" src="mango%202.jpg" alt="" loading="lazy" /></button>
-          <button class="thumb flex-1 aspect-[4/3] overflow-hidden" data-src="mango%203.jpg" aria-label="Photo 3"><img class="h-full w-full object-cover" src="mango%203.jpg" alt="" loading="lazy" /></button>
+          <button class="thumb is-active flex-1 aspect-[4/3] overflow-hidden" data-src="images/opt/mango-1-800.jpg" data-srcset="images/opt/mango-1-480.webp 480w, images/opt/mango-1-800.webp 800w, images/opt/mango-1-1200.webp 1200w" aria-label="Photo 1"><img decoding="async" class="h-full w-full object-cover" src="images/opt/mango-1-480.webp" width="2200" height="1466" alt="" loading="lazy" /></button>
+          <button class="thumb flex-1 aspect-[4/3] overflow-hidden" data-src="images/opt/mango-2-800.jpg" data-srcset="images/opt/mango-2-480.webp 480w, images/opt/mango-2-800.webp 800w, images/opt/mango-2-1200.webp 1200w" aria-label="Photo 2"><img decoding="async" class="h-full w-full object-cover" src="images/opt/mango-2-480.webp" width="2200" height="1466" alt="" loading="lazy" /></button>
+          <button class="thumb flex-1 aspect-[4/3] overflow-hidden" data-src="images/opt/mango-3-800.jpg" data-srcset="images/opt/mango-3-480.webp 480w, images/opt/mango-3-800.webp 800w, images/opt/mango-3-1200.webp 1200w" aria-label="Photo 3"><img decoding="async" class="h-full w-full object-cover" src="images/opt/mango-3-480.webp" width="2200" height="1467" alt="" loading="lazy" /></button>
         </div>
       </div>
       <div class="reveal">
         <p class="flex items-center gap-4"><span class="rule bg-azure/50"></span><span class="eyebrow !text-[.7rem] text-azure">No. 03 &middot; Private Cottage</span></p>
-        <h3 class="mt-4 font-display text-4xl sm:text-5xl leading-[1.05]">Mango Cottage Suite</h3>
+        <h3 class="mt-4 font-display text-3xl sm:text-5xl leading-[1.05]">Mango Cottage Suite</h3>
         <p class="mt-3 font-display italic text-lg text-azure">Queen Bed &middot; En-Suite Bathroom &middot; Private Garden</p>
-        <p class="mt-5 text-lg text-ink/70 leading-relaxed">Ideal for couples or solo guests, the Mango Cottage Suite provides a queen-sized bed, garden views, and direct access to peaceful outdoor surroundings. The suite includes an en-suite bathroom, kitchenette, air conditioning, and a private seating area for added comfort.</p>
+        <p class="mt-4 sm:mt-5 text-base sm:text-lg text-ink/70 leading-relaxed">Ideal for couples or solo guests, the Mango Cottage Suite provides a queen-sized bed, garden views, and direct access to peaceful outdoor surroundings. The suite includes an en-suite bathroom, kitchenette, air conditioning, and a private seating area for added comfort.</p>
         <ul class="mt-7 grid sm:grid-cols-2 gap-x-8 gap-y-3 text-ink/80 text-lg">
           <li class="flex items-baseline gap-3"><span class="suit text-azure">&#9824;</span>Queen bed</li>
           <li class="flex items-baseline gap-3"><span class="suit text-azure">&#9829;</span>Garden views &amp; outdoor access</li>
@@ -244,13 +228,13 @@
   </section>
 
   <!-- 4 · KOGUI TEMPLE — image right -->
-  <section class="relative bg-sand/40 py-16 sm:py-24">
-    <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12 grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+  <section class="relative bg-sand/40 py-12 sm:py-16 lg:py-24">
+    <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12 grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
       <div class="reveal order-2 lg:order-1">
         <p class="flex items-center gap-4"><span class="rule bg-azure/50"></span><span class="eyebrow !text-[.7rem] text-azure">No. 04 &middot; Indigenous Inspiration</span></p>
-        <h3 class="mt-4 font-display text-4xl sm:text-5xl leading-[1.05]">Kogui Temple</h3>
+        <h3 class="mt-4 font-display text-3xl sm:text-5xl leading-[1.05]">Kogui Temple</h3>
         <p class="mt-3 font-display italic text-lg text-azure">Queen Bed &middot; En-Suite Bathroom &middot; Private Space</p>
-        <p class="mt-5 text-lg text-ink/70 leading-relaxed">The Kogui Temple is architecturally stunning, with its hexagonal design, abundant windows, and an elevated cupola for beautiful light and refreshing natural airflow.</p>
+        <p class="mt-4 sm:mt-5 text-base sm:text-lg text-ink/70 leading-relaxed">The Kogui Temple is architecturally stunning, with its hexagonal design, abundant windows, and an elevated cupola for beautiful light and refreshing natural airflow.</p>
         <ul class="mt-7 grid sm:grid-cols-2 gap-x-8 gap-y-3 text-ink/80 text-lg">
           <li class="flex items-baseline gap-3"><span class="suit text-azure">&#9824;</span>Unique hexagonal architecture</li>
           <li class="flex items-baseline gap-3"><span class="suit text-azure">&#9829;</span>Elevated cupola with natural light</li>
@@ -261,34 +245,34 @@
       </div>
       <div class="reveal order-1 lg:order-2" data-gallery>
         <div class="relative overflow-hidden bg-deep grade aspect-[4/3]">
-          <img data-main class="h-full w-full object-cover transition-opacity duration-300" src="Kogui%20Temple%20-%20Synergy%20%20(1).jpg" alt="Kogui Temple" />
+          <img loading="lazy" decoding="async" data-main class="h-full w-full object-cover transition-opacity duration-300" src="images/opt/kogui-temple-synergy-1-800.jpg" srcset="images/opt/kogui-temple-synergy-1-480.webp 480w, images/opt/kogui-temple-synergy-1-800.webp 800w, images/opt/kogui-temple-synergy-1-1200.webp 1200w" sizes="(min-width: 1024px) 50vw, 100vw" width="2200" height="1466" alt="Kogui Temple" />
         </div>
         <div class="mt-3 flex gap-3">
-          <button class="thumb is-active flex-1 aspect-[4/3] overflow-hidden" data-src="Kogui%20Temple%20-%20Synergy%20%20(1).jpg" aria-label="Photo 1"><img class="h-full w-full object-cover" src="Kogui%20Temple%20-%20Synergy%20%20(1).jpg" alt="" loading="lazy" /></button>
-          <button class="thumb flex-1 aspect-[4/3] overflow-hidden" data-src="Kogui%20Temple%20-%20Synergy%20%20(3).jpg" aria-label="Photo 2"><img class="h-full w-full object-cover" src="Kogui%20Temple%20-%20Synergy%20%20(3).jpg" alt="" loading="lazy" /></button>
+          <button class="thumb is-active flex-1 aspect-[4/3] overflow-hidden" data-src="images/opt/kogui-temple-synergy-1-800.jpg" data-srcset="images/opt/kogui-temple-synergy-1-480.webp 480w, images/opt/kogui-temple-synergy-1-800.webp 800w, images/opt/kogui-temple-synergy-1-1200.webp 1200w" aria-label="Photo 1"><img decoding="async" class="h-full w-full object-cover" src="images/opt/kogui-temple-synergy-1-480.webp" width="2200" height="1466" alt="" loading="lazy" /></button>
+          <button class="thumb flex-1 aspect-[4/3] overflow-hidden" data-src="images/opt/kogui-temple-synergy-3-800.jpg" data-srcset="images/opt/kogui-temple-synergy-3-480.webp 480w, images/opt/kogui-temple-synergy-3-800.webp 800w, images/opt/kogui-temple-synergy-3-1200.webp 1200w" aria-label="Photo 2"><img decoding="async" class="h-full w-full object-cover" src="images/opt/kogui-temple-synergy-3-480.webp" width="2000" height="1332" alt="" loading="lazy" /></button>
         </div>
       </div>
     </div>
   </section>
 
   <!-- 5 · LOTUS ROOMS — image left -->
-  <section class="relative bg-ivory py-16 sm:py-24">
-    <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12 grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+  <section class="relative bg-ivory py-12 sm:py-16 lg:py-24">
+    <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12 grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
       <div class="reveal" data-gallery>
         <div class="relative overflow-hidden bg-deep grade aspect-[4/3]">
-          <img data-main class="h-full w-full object-cover transition-opacity duration-300" src="Lotus%201.jpg" alt="Lotus Room" />
+          <img loading="lazy" decoding="async" data-main class="h-full w-full object-cover transition-opacity duration-300" src="images/opt/lotus-1-800.jpg" srcset="images/opt/lotus-1-480.webp 480w, images/opt/lotus-1-800.webp 800w, images/opt/lotus-1-1200.webp 1200w" sizes="(min-width: 1024px) 50vw, 100vw" width="2200" height="1238" alt="Lotus Room" />
         </div>
         <div class="mt-3 flex gap-3">
-          <button class="thumb is-active flex-1 aspect-[4/3] overflow-hidden" data-src="Lotus%201.jpg" aria-label="Photo 1"><img class="h-full w-full object-cover" src="Lotus%201.jpg" alt="" loading="lazy" /></button>
-          <button class="thumb flex-1 aspect-[4/3] overflow-hidden" data-src="Lotus%202.jpg" aria-label="Photo 2"><img class="h-full w-full object-cover" src="Lotus%202.jpg" alt="" loading="lazy" /></button>
-          <button class="thumb flex-1 aspect-[4/3] overflow-hidden" data-src="Lotus%203.jpg" aria-label="Photo 3"><img class="h-full w-full object-cover" src="Lotus%203.jpg" alt="" loading="lazy" /></button>
+          <button class="thumb is-active flex-1 aspect-[4/3] overflow-hidden" data-src="images/opt/lotus-1-800.jpg" data-srcset="images/opt/lotus-1-480.webp 480w, images/opt/lotus-1-800.webp 800w, images/opt/lotus-1-1200.webp 1200w" aria-label="Photo 1"><img decoding="async" class="h-full w-full object-cover" src="images/opt/lotus-1-480.webp" width="2200" height="1238" alt="" loading="lazy" /></button>
+          <button class="thumb flex-1 aspect-[4/3] overflow-hidden" data-src="images/opt/lotus-2-800.jpg" data-srcset="images/opt/lotus-2-480.webp 480w, images/opt/lotus-2-800.webp 800w, images/opt/lotus-2-1200.webp 1200w" aria-label="Photo 2"><img decoding="async" class="h-full w-full object-cover" src="images/opt/lotus-2-480.webp" width="2200" height="1466" alt="" loading="lazy" /></button>
+          <button class="thumb flex-1 aspect-[4/3] overflow-hidden" data-src="images/opt/lotus-3-800.jpg" data-srcset="images/opt/lotus-3-480.webp 480w, images/opt/lotus-3-800.webp 800w, images/opt/lotus-3-1200.webp 1200w" aria-label="Photo 3"><img decoding="async" class="h-full w-full object-cover" src="images/opt/lotus-3-480.webp" width="2200" height="1238" alt="" loading="lazy" /></button>
         </div>
       </div>
       <div class="reveal">
         <p class="flex items-center gap-4"><span class="rule bg-azure/50"></span><span class="eyebrow !text-[.7rem] text-azure">No. 05 &middot; Minimal &amp; Serene</span></p>
-        <h3 class="mt-4 font-display text-4xl sm:text-5xl leading-[1.05]">Lotus Rooms</h3>
+        <h3 class="mt-4 font-display text-3xl sm:text-5xl leading-[1.05]">Lotus Rooms</h3>
         <p class="mt-3 font-display italic text-lg text-azure">2 Single Beds &middot; Shared Bathroom &middot; Jungle Views</p>
-        <p class="mt-5 text-lg text-ink/70 leading-relaxed">This space has 2 single beds, with a shared bathroom a few steps out the front door.</p>
+        <p class="mt-4 sm:mt-5 text-base sm:text-lg text-ink/70 leading-relaxed">This space has 2 single beds, with a shared bathroom a few steps out the front door.</p>
         <ul class="mt-7 grid sm:grid-cols-2 gap-x-8 gap-y-3 text-ink/80 text-lg">
           <li class="flex items-baseline gap-3"><span class="suit text-azure">&#9824;</span>2 single beds</li>
           <li class="flex items-baseline gap-3"><span class="suit text-azure">&#9829;</span>Shared bathroom steps away</li>
@@ -299,13 +283,13 @@
   </section>
 
   <!-- 6 · FLOWER OF LIFE ROOM — image right -->
-  <section class="relative bg-sand/40 py-16 sm:py-24">
-    <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12 grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+  <section class="relative bg-sand/40 py-12 sm:py-16 lg:py-24">
+    <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12 grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
       <div class="reveal order-2 lg:order-1">
         <p class="flex items-center gap-4"><span class="rule bg-azure/50"></span><span class="eyebrow !text-[.7rem] text-azure">No. 06 &middot; Sacred Geometry</span></p>
-        <h3 class="mt-4 font-display text-4xl sm:text-5xl leading-[1.05]">Flower of Life Room</h3>
+        <h3 class="mt-4 font-display text-3xl sm:text-5xl leading-[1.05]">Flower of Life Room</h3>
         <p class="mt-3 font-display italic text-lg text-azure">Stacked Beds &middot; Private Bathroom &middot; Shared Patio</p>
-        <p class="mt-5 text-lg text-ink/70 leading-relaxed">The Flower of Life is a comfortable and stylish room with a private bathroom. It contains two stacked beds with extra-thick, deluxe pillowtop mattresses, a large closet with shelves and drawers, and a couch seating area. It shares a patio with the adjacent Hamsa room, a secluded nook to relax and enjoy the sights and sounds of the surrounding nature.</p>
+        <p class="mt-4 sm:mt-5 text-base sm:text-lg text-ink/70 leading-relaxed">The Flower of Life is a comfortable and stylish room with a private bathroom. It contains two stacked beds with extra-thick, deluxe pillowtop mattresses, a large closet with shelves and drawers, and a couch seating area. It shares a patio with the adjacent Hamsa room, a secluded nook to relax and enjoy the sights and sounds of the surrounding nature.</p>
         <ul class="mt-7 grid sm:grid-cols-2 gap-x-8 gap-y-3 text-ink/80 text-lg">
           <li class="flex items-baseline gap-3"><span class="suit text-azure">&#9824;</span>2 stacked beds with pillowtop mattresses</li>
           <li class="flex items-baseline gap-3"><span class="suit text-azure">&#9829;</span>Private bathroom</li>
@@ -316,35 +300,35 @@
       </div>
       <div class="reveal order-1 lg:order-2" data-gallery>
         <div class="relative overflow-hidden bg-deep grade aspect-[4/3]">
-          <img data-main class="h-full w-full object-cover transition-opacity duration-300" src="flower%201.jpg" alt="Flower of Life Room" />
+          <img loading="lazy" decoding="async" data-main class="h-full w-full object-cover transition-opacity duration-300" src="images/opt/flower-1-800.jpg" srcset="images/opt/flower-1-480.webp 480w, images/opt/flower-1-800.webp 800w, images/opt/flower-1-1200.webp 1200w" sizes="(min-width: 1024px) 50vw, 100vw" width="2200" height="1466" alt="Flower of Life Room" />
         </div>
         <div class="mt-3 flex gap-3">
-          <button class="thumb is-active flex-1 aspect-[4/3] overflow-hidden" data-src="flower%201.jpg" aria-label="Photo 1"><img class="h-full w-full object-cover" src="flower%201.jpg" alt="" loading="lazy" /></button>
-          <button class="thumb flex-1 aspect-[4/3] overflow-hidden" data-src="flower%202.jpg" aria-label="Photo 2"><img class="h-full w-full object-cover" src="flower%202.jpg" alt="" loading="lazy" /></button>
-          <button class="thumb flex-1 aspect-[4/3] overflow-hidden" data-src="flower%203.jpg" aria-label="Photo 3"><img class="h-full w-full object-cover" src="flower%203.jpg" alt="" loading="lazy" /></button>
+          <button class="thumb is-active flex-1 aspect-[4/3] overflow-hidden" data-src="images/opt/flower-1-800.jpg" data-srcset="images/opt/flower-1-480.webp 480w, images/opt/flower-1-800.webp 800w, images/opt/flower-1-1200.webp 1200w" aria-label="Photo 1"><img decoding="async" class="h-full w-full object-cover" src="images/opt/flower-1-480.webp" width="2200" height="1466" alt="" loading="lazy" /></button>
+          <button class="thumb flex-1 aspect-[4/3] overflow-hidden" data-src="images/opt/flower-2-800.jpg" data-srcset="images/opt/flower-2-480.webp 480w, images/opt/flower-2-800.webp 800w, images/opt/flower-2-1200.webp 1200w" aria-label="Photo 2"><img decoding="async" class="h-full w-full object-cover" src="images/opt/flower-2-480.webp" width="2200" height="1466" alt="" loading="lazy" /></button>
+          <button class="thumb flex-1 aspect-[4/3] overflow-hidden" data-src="images/opt/flower-3-800.jpg" data-srcset="images/opt/flower-3-480.webp 480w, images/opt/flower-3-800.webp 800w, images/opt/flower-3-1200.webp 1200w" aria-label="Photo 3"><img decoding="async" class="h-full w-full object-cover" src="images/opt/flower-3-480.webp" width="2200" height="1466" alt="" loading="lazy" /></button>
         </div>
       </div>
     </div>
   </section>
 
   <!-- 7 · HAMSA ROOM — image left -->
-  <section class="relative bg-ivory py-16 sm:py-24">
-    <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12 grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+  <section class="relative bg-ivory py-12 sm:py-16 lg:py-24">
+    <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12 grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
       <div class="reveal" data-gallery>
         <div class="relative overflow-hidden bg-deep grade aspect-[4/3]">
-          <img data-main class="h-full w-full object-cover transition-opacity duration-300" src="Hamsa%201%20and%20Flower%20of%20life%202%20rooms%20-%20Each%20with%202%20full-size%20bunk%20bed%20private%20bathrooms%20%20--%20Synergy%20(2).jpg" alt="Hamsa Room" />
+          <img loading="lazy" decoding="async" data-main class="h-full w-full object-cover transition-opacity duration-300" src="images/opt/hamsa-1-and-flower-of-life-2-rooms-each-with-2-full-size-bunk-bed-private-bathrooms-synergy-2-800.jpg" srcset="images/opt/hamsa-1-and-flower-of-life-2-rooms-each-with-2-full-size-bunk-bed-private-bathrooms-synergy-2-480.webp 480w, images/opt/hamsa-1-and-flower-of-life-2-rooms-each-with-2-full-size-bunk-bed-private-bathrooms-synergy-2-800.webp 800w, images/opt/hamsa-1-and-flower-of-life-2-rooms-each-with-2-full-size-bunk-bed-private-bathrooms-synergy-2-1200.webp 1200w" sizes="(min-width: 1024px) 50vw, 100vw" width="2200" height="1466" alt="Hamsa Room" />
         </div>
         <div class="mt-3 flex gap-3">
-          <button class="thumb is-active flex-1 aspect-[4/3] overflow-hidden" data-src="Hamsa%201%20and%20Flower%20of%20life%202%20rooms%20-%20Each%20with%202%20full-size%20bunk%20bed%20private%20bathrooms%20%20--%20Synergy%20(2).jpg" aria-label="Photo 1"><img class="h-full w-full object-cover" src="Hamsa%201%20and%20Flower%20of%20life%202%20rooms%20-%20Each%20with%202%20full-size%20bunk%20bed%20private%20bathrooms%20%20--%20Synergy%20(2).jpg" alt="" loading="lazy" /></button>
-          <button class="thumb flex-1 aspect-[4/3] overflow-hidden" data-src="hamsa%202.jpg" aria-label="Photo 2"><img class="h-full w-full object-cover" src="hamsa%202.jpg" alt="" loading="lazy" /></button>
-          <button class="thumb flex-1 aspect-[4/3] overflow-hidden" data-src="hamsa%203.jpg" aria-label="Photo 3"><img class="h-full w-full object-cover" src="hamsa%203.jpg" alt="" loading="lazy" /></button>
+          <button class="thumb is-active flex-1 aspect-[4/3] overflow-hidden" data-src="images/opt/hamsa-1-and-flower-of-life-2-rooms-each-with-2-full-size-bunk-bed-private-bathrooms-synergy-2-800.jpg" data-srcset="images/opt/hamsa-1-and-flower-of-life-2-rooms-each-with-2-full-size-bunk-bed-private-bathrooms-synergy-2-480.webp 480w, images/opt/hamsa-1-and-flower-of-life-2-rooms-each-with-2-full-size-bunk-bed-private-bathrooms-synergy-2-800.webp 800w, images/opt/hamsa-1-and-flower-of-life-2-rooms-each-with-2-full-size-bunk-bed-private-bathrooms-synergy-2-1200.webp 1200w" aria-label="Photo 1"><img decoding="async" class="h-full w-full object-cover" src="images/opt/hamsa-1-and-flower-of-life-2-rooms-each-with-2-full-size-bunk-bed-private-bathrooms-synergy-2-480.webp" width="2200" height="1466" alt="" loading="lazy" /></button>
+          <button class="thumb flex-1 aspect-[4/3] overflow-hidden" data-src="images/opt/hamsa-2-800.jpg" data-srcset="images/opt/hamsa-2-480.webp 480w, images/opt/hamsa-2-800.webp 800w, images/opt/hamsa-2-1200.webp 1200w" aria-label="Photo 2"><img decoding="async" class="h-full w-full object-cover" src="images/opt/hamsa-2-480.webp" width="1467" height="2200" alt="" loading="lazy" /></button>
+          <button class="thumb flex-1 aspect-[4/3] overflow-hidden" data-src="images/opt/hamsa-3-800.jpg" data-srcset="images/opt/hamsa-3-480.webp 480w, images/opt/hamsa-3-800.webp 800w, images/opt/hamsa-3-1200.webp 1200w" aria-label="Photo 3"><img decoding="async" class="h-full w-full object-cover" src="images/opt/hamsa-3-480.webp" width="2200" height="1466" alt="" loading="lazy" /></button>
         </div>
       </div>
       <div class="reveal">
         <p class="flex items-center gap-4"><span class="rule bg-azure/50"></span><span class="eyebrow !text-[.7rem] text-azure">No. 07 &middot; Protection &amp; Warmth</span></p>
-        <h3 class="mt-4 font-display text-4xl sm:text-5xl leading-[1.05]">Hamsa Room</h3>
+        <h3 class="mt-4 font-display text-3xl sm:text-5xl leading-[1.05]">Hamsa Room</h3>
         <p class="mt-3 font-display italic text-lg text-azure">Stacked Beds &middot; Private Bathroom &middot; Shared Patio</p>
-        <p class="mt-5 text-lg text-ink/70 leading-relaxed">The Hamsa room is stylishly decorated with modern and eastern motifs. There are 2 stacked beds with extra-thick, deluxe pillowtop mattresses, a large wooden storage for your things, and a private bathroom. There are comfortable places to relax inside and out, whether on the sofa or on the patio shared with the Flower of Life room.</p>
+        <p class="mt-4 sm:mt-5 text-base sm:text-lg text-ink/70 leading-relaxed">The Hamsa room is stylishly decorated with modern and eastern motifs. There are 2 stacked beds with extra-thick, deluxe pillowtop mattresses, a large wooden storage for your things, and a private bathroom. There are comfortable places to relax inside and out, whether on the sofa or on the patio shared with the Flower of Life room.</p>
         <ul class="mt-7 grid sm:grid-cols-2 gap-x-8 gap-y-3 text-ink/80 text-lg">
           <li class="flex items-baseline gap-3"><span class="suit text-azure">&#9824;</span>2 stacked beds with pillowtop mattresses</li>
           <li class="flex items-baseline gap-3"><span class="suit text-azure">&#9829;</span>Private bathroom</li>
@@ -357,13 +341,13 @@
   </section>
 
   <!-- 8 · ESTRELLA ROOM — image right -->
-  <section class="relative bg-sand/40 py-16 sm:py-24">
-    <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12 grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+  <section class="relative bg-sand/40 py-12 sm:py-16 lg:py-24">
+    <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12 grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
       <div class="reveal order-2 lg:order-1">
         <p class="flex items-center gap-4"><span class="rule bg-azure/50"></span><span class="eyebrow !text-[.7rem] text-azure">No. 08 &middot; Under the Stars</span></p>
-        <h3 class="mt-4 font-display text-4xl sm:text-5xl leading-[1.05]">Estrella Room</h3>
+        <h3 class="mt-4 font-display text-3xl sm:text-5xl leading-[1.05]">Estrella Room</h3>
         <p class="mt-3 font-display italic text-lg text-azure">2 Single Beds &middot; Private Bathroom &middot; Private Space</p>
-        <p class="mt-5 text-lg text-ink/70 leading-relaxed">Situated on the ground floor of the Master Suite, the Estrella Room has 2 single beds with extra-thick, deluxe pillowtop mattresses, a private bathroom, and a large closet. It shares the Master Suite&rsquo;s large downstairs lounging areas and kitchen.</p>
+        <p class="mt-4 sm:mt-5 text-base sm:text-lg text-ink/70 leading-relaxed">Situated on the ground floor of the Master Suite, the Estrella Room has 2 single beds with extra-thick, deluxe pillowtop mattresses, a private bathroom, and a large closet. It shares the Master Suite&rsquo;s large downstairs lounging areas and kitchen.</p>
         <ul class="mt-7 grid sm:grid-cols-2 gap-x-8 gap-y-3 text-ink/80 text-lg">
           <li class="flex items-baseline gap-3"><span class="suit text-azure">&#9824;</span>2 single beds with pillowtop mattresses</li>
           <li class="flex items-baseline gap-3"><span class="suit text-azure">&#9829;</span>Private bathroom</li>
@@ -374,34 +358,34 @@
       </div>
       <div class="reveal order-1 lg:order-2" data-gallery>
         <div class="relative overflow-hidden bg-deep grade aspect-[4/3]">
-          <img data-main class="h-full w-full object-cover transition-opacity duration-300" src="Estrella%20-%202%20single%20beds%20private%20batheroom%20-%20Synergy%20%20(7).jpg" alt="Estrella Room" />
+          <img loading="lazy" decoding="async" data-main class="h-full w-full object-cover transition-opacity duration-300" src="images/opt/estrella-2-single-beds-private-batheroom-synergy-7-800.jpg" srcset="images/opt/estrella-2-single-beds-private-batheroom-synergy-7-480.webp 480w, images/opt/estrella-2-single-beds-private-batheroom-synergy-7-800.webp 800w, images/opt/estrella-2-single-beds-private-batheroom-synergy-7-1200.webp 1200w" sizes="(min-width: 1024px) 50vw, 100vw" width="2200" height="1466" alt="Estrella Room" />
         </div>
         <div class="mt-3 flex gap-3">
-          <button class="thumb is-active flex-1 aspect-[4/3] overflow-hidden" data-src="Estrella%20-%202%20single%20beds%20private%20batheroom%20-%20Synergy%20%20(7).jpg" aria-label="Photo 1"><img class="h-full w-full object-cover" src="Estrella%20-%202%20single%20beds%20private%20batheroom%20-%20Synergy%20%20(7).jpg" alt="" loading="lazy" /></button>
-          <button class="thumb flex-1 aspect-[4/3] overflow-hidden" data-src="Estrella%20-%202%20single%20beds%20private%20batheroom%20-%20Synergy%20%20(4).jpg" aria-label="Photo 2"><img class="h-full w-full object-cover" src="Estrella%20-%202%20single%20beds%20private%20batheroom%20-%20Synergy%20%20(4).jpg" alt="" loading="lazy" /></button>
+          <button class="thumb is-active flex-1 aspect-[4/3] overflow-hidden" data-src="images/opt/estrella-2-single-beds-private-batheroom-synergy-7-800.jpg" data-srcset="images/opt/estrella-2-single-beds-private-batheroom-synergy-7-480.webp 480w, images/opt/estrella-2-single-beds-private-batheroom-synergy-7-800.webp 800w, images/opt/estrella-2-single-beds-private-batheroom-synergy-7-1200.webp 1200w" aria-label="Photo 1"><img decoding="async" class="h-full w-full object-cover" src="images/opt/estrella-2-single-beds-private-batheroom-synergy-7-480.webp" width="2200" height="1466" alt="" loading="lazy" /></button>
+          <button class="thumb flex-1 aspect-[4/3] overflow-hidden" data-src="images/opt/estrella-2-single-beds-private-batheroom-synergy-4-800.jpg" data-srcset="images/opt/estrella-2-single-beds-private-batheroom-synergy-4-480.webp 480w, images/opt/estrella-2-single-beds-private-batheroom-synergy-4-800.webp 800w, images/opt/estrella-2-single-beds-private-batheroom-synergy-4-1200.webp 1200w" aria-label="Photo 2"><img decoding="async" class="h-full w-full object-cover" src="images/opt/estrella-2-single-beds-private-batheroom-synergy-4-480.webp" width="2200" height="1466" alt="" loading="lazy" /></button>
         </div>
       </div>
     </div>
   </section>
 
   <!-- 9 · COLIBRI SEMI-DORM ROOMS — image left -->
-  <section class="relative bg-ivory py-16 sm:py-24">
-    <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12 grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+  <section class="relative bg-ivory py-12 sm:py-16 lg:py-24">
+    <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12 grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
       <div class="reveal" data-gallery>
         <div class="relative overflow-hidden bg-deep grade aspect-[4/3]">
-          <img data-main class="h-full w-full object-cover transition-opacity duration-300" src="dorm1.jpg" alt="Colibri Semi-Dorm Room" />
+          <img loading="lazy" decoding="async" data-main class="h-full w-full object-cover transition-opacity duration-300" src="images/opt/dorm1-800.jpg" srcset="images/opt/dorm1-480.webp 480w, images/opt/dorm1-800.webp 800w, images/opt/dorm1-1200.webp 1200w" sizes="(min-width: 1024px) 50vw, 100vw" width="1447" height="2000" alt="Colibri Semi-Dorm Room" />
         </div>
         <div class="mt-3 flex gap-3">
-          <button class="thumb is-active flex-1 aspect-[4/3] overflow-hidden" data-src="dorm1.jpg" aria-label="Photo 1"><img class="h-full w-full object-cover" src="dorm1.jpg" alt="" loading="lazy" /></button>
-          <button class="thumb flex-1 aspect-[4/3] overflow-hidden" data-src="dorm2.jpg" aria-label="Photo 2"><img class="h-full w-full object-cover" src="dorm2.jpg" alt="" loading="lazy" /></button>
-          <button class="thumb flex-1 aspect-[4/3] overflow-hidden" data-src="dorm3.jpg" aria-label="Photo 3"><img class="h-full w-full object-cover" src="dorm3.jpg" alt="" loading="lazy" /></button>
+          <button class="thumb is-active flex-1 aspect-[4/3] overflow-hidden" data-src="images/opt/dorm1-800.jpg" data-srcset="images/opt/dorm1-480.webp 480w, images/opt/dorm1-800.webp 800w, images/opt/dorm1-1200.webp 1200w" aria-label="Photo 1"><img decoding="async" class="h-full w-full object-cover" src="images/opt/dorm1-480.webp" width="1447" height="2000" alt="" loading="lazy" /></button>
+          <button class="thumb flex-1 aspect-[4/3] overflow-hidden" data-src="images/opt/dorm2-800.jpg" data-srcset="images/opt/dorm2-480.webp 480w, images/opt/dorm2-800.webp 800w, images/opt/dorm2-1200.webp 1200w" aria-label="Photo 2"><img decoding="async" class="h-full w-full object-cover" src="images/opt/dorm2-480.webp" width="1447" height="2000" alt="" loading="lazy" /></button>
+          <button class="thumb flex-1 aspect-[4/3] overflow-hidden" data-src="images/opt/dorm3-800.jpg" data-srcset="images/opt/dorm3-480.webp 480w, images/opt/dorm3-800.webp 800w, images/opt/dorm3-1200.webp 1200w" aria-label="Photo 3"><img decoding="async" class="h-full w-full object-cover" src="images/opt/dorm3-480.webp" width="1447" height="2000" alt="" loading="lazy" /></button>
         </div>
       </div>
       <div class="reveal">
         <p class="flex items-center gap-4"><span class="rule bg-azure/50"></span><span class="eyebrow !text-[.7rem] text-azure">No. 09 &middot; Community &amp; Connection</span></p>
-        <h3 class="mt-4 font-display text-4xl sm:text-5xl leading-[1.05]">Colibri Semi-Dorm Rooms</h3>
+        <h3 class="mt-4 font-display text-3xl sm:text-5xl leading-[1.05]">Colibri Semi-Dorm Rooms</h3>
         <p class="mt-3 font-display italic text-lg text-azure">Shared Beds &middot; Shared Bathroom &middot; Social Vibe</p>
-        <p class="mt-5 text-lg text-ink/70 leading-relaxed">On the ground floor of the expansive elevated yoga deck are 2 &ldquo;semi-dorm&rdquo; rooms, each with 2 full-sized beds. We call them &ldquo;semi-dorm&rdquo; since, though they each have their own doors for privacy, they share the same central area and bathroom.</p>
+        <p class="mt-4 sm:mt-5 text-base sm:text-lg text-ink/70 leading-relaxed">On the ground floor of the expansive elevated yoga deck are 2 &ldquo;semi-dorm&rdquo; rooms, each with 2 full-sized beds. We call them &ldquo;semi-dorm&rdquo; since, though they each have their own doors for privacy, they share the same central area and bathroom.</p>
         <ul class="mt-7 grid sm:grid-cols-2 gap-x-8 gap-y-3 text-ink/80 text-lg">
           <li class="flex items-baseline gap-3"><span class="suit text-azure">&#9824;</span>2 full-sized beds per room</li>
           <li class="flex items-baseline gap-3"><span class="suit text-azure">&#9829;</span>Private door per room</li>
@@ -413,7 +397,7 @@
   </section>
 
   <!-- ============================================================ COMMON AREAS ============================================================ -->
-  <section class="relative bg-deep grain py-28 sm:py-36 overflow-hidden">
+  <section class="relative bg-deep grain py-20 sm:py-28 lg:py-36 overflow-hidden">
     <div class="relative mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
       <div class="max-w-2xl">
         <p class="reveal flex items-center gap-4">
@@ -427,21 +411,21 @@
       </div>
 
       <div class="mt-14 grid grid-cols-2 lg:grid-cols-3 gap-3 grade">
-        <figure class="reveal group relative aspect-[4/3] overflow-hidden"><img src="common%201.jpg" alt="Common area" class="h-full w-full object-cover transition-transform duration-[1.4s] ease-out group-hover:scale-[1.04]" loading="lazy" /></figure>
-        <figure class="reveal group relative aspect-[4/3] overflow-hidden"><img src="common%202.jpg" alt="Common area" class="h-full w-full object-cover transition-transform duration-[1.4s] ease-out group-hover:scale-[1.04]" loading="lazy" /></figure>
-        <figure class="reveal group relative aspect-[4/3] overflow-hidden"><img src="common%203.jpg" alt="Common area" class="h-full w-full object-cover transition-transform duration-[1.4s] ease-out group-hover:scale-[1.04]" loading="lazy" /></figure>
-        <figure class="reveal group relative aspect-[4/3] overflow-hidden"><img src="common%204.jpg" alt="Common area" class="h-full w-full object-cover transition-transform duration-[1.4s] ease-out group-hover:scale-[1.04]" loading="lazy" /></figure>
-        <figure class="reveal group relative aspect-[4/3] overflow-hidden"><img src="common%205.jpg" alt="Common area" class="h-full w-full object-cover transition-transform duration-[1.4s] ease-out group-hover:scale-[1.04]" loading="lazy" /></figure>
-        <figure class="reveal group relative aspect-[4/3] overflow-hidden"><img src="common%206.jpg" alt="Common area" class="h-full w-full object-cover transition-transform duration-[1.4s] ease-out group-hover:scale-[1.04]" loading="lazy" /></figure>
-        <figure class="reveal group relative aspect-[4/3] overflow-hidden"><img src="common%207.jpg" alt="Common area" class="h-full w-full object-cover transition-transform duration-[1.4s] ease-out group-hover:scale-[1.04]" loading="lazy" /></figure>
-        <figure class="reveal group relative aspect-[4/3] overflow-hidden"><img src="common%208%20.jpg" alt="Common area" class="h-full w-full object-cover transition-transform duration-[1.4s] ease-out group-hover:scale-[1.04]" loading="lazy" /></figure>
-        <figure class="reveal group relative aspect-[4/3] overflow-hidden"><img src="weights%20synergy.jpg" alt="Fitness and weights area" class="h-full w-full object-cover transition-transform duration-[1.4s] ease-out group-hover:scale-[1.04]" loading="lazy" /></figure>
+        <figure class="reveal group relative aspect-[4/3] overflow-hidden"><img src="images/opt/common-1-800.jpg" srcset="images/opt/common-1-480.webp 480w, images/opt/common-1-800.webp 800w, images/opt/common-1-1200.webp 1200w" sizes="(min-width: 1024px) 33vw, 50vw" width="2200" height="1466" alt="Common area" class="h-full w-full object-cover transition-transform duration-[1.4s] ease-out group-hover:scale-[1.04]" loading="lazy" /></figure>
+        <figure class="reveal group relative aspect-[4/3] overflow-hidden"><img src="images/opt/common-2-800.jpg" srcset="images/opt/common-2-480.webp 480w, images/opt/common-2-800.webp 800w, images/opt/common-2-1200.webp 1200w" sizes="(min-width: 1024px) 33vw, 50vw" width="2200" height="1465" alt="Common area" class="h-full w-full object-cover transition-transform duration-[1.4s] ease-out group-hover:scale-[1.04]" loading="lazy" /></figure>
+        <figure class="reveal group relative aspect-[4/3] overflow-hidden"><img src="images/opt/common-3-800.jpg" srcset="images/opt/common-3-480.webp 480w, images/opt/common-3-800.webp 800w, images/opt/common-3-1200.webp 1200w" sizes="(min-width: 1024px) 33vw, 50vw" width="2200" height="1467" alt="Common area" class="h-full w-full object-cover transition-transform duration-[1.4s] ease-out group-hover:scale-[1.04]" loading="lazy" /></figure>
+        <figure class="reveal group relative aspect-[4/3] overflow-hidden"><img src="images/opt/common-4-800.jpg" srcset="images/opt/common-4-480.webp 480w, images/opt/common-4-800.webp 800w, images/opt/common-4-1200.webp 1200w" sizes="(min-width: 1024px) 33vw, 50vw" width="2200" height="1467" alt="Common area" class="h-full w-full object-cover transition-transform duration-[1.4s] ease-out group-hover:scale-[1.04]" loading="lazy" /></figure>
+        <figure class="reveal group relative aspect-[4/3] overflow-hidden"><img src="images/opt/common-5-800.jpg" srcset="images/opt/common-5-480.webp 480w, images/opt/common-5-800.webp 800w, images/opt/common-5-1200.webp 1200w" sizes="(min-width: 1024px) 33vw, 50vw" width="2200" height="1467" alt="Common area" class="h-full w-full object-cover transition-transform duration-[1.4s] ease-out group-hover:scale-[1.04]" loading="lazy" /></figure>
+        <figure class="reveal group relative aspect-[4/3] overflow-hidden"><img src="images/opt/common-6-800.jpg" srcset="images/opt/common-6-480.webp 480w, images/opt/common-6-800.webp 800w, images/opt/common-6-1200.webp 1200w" sizes="(min-width: 1024px) 33vw, 50vw" width="2200" height="1466" alt="Common area" class="h-full w-full object-cover transition-transform duration-[1.4s] ease-out group-hover:scale-[1.04]" loading="lazy" /></figure>
+        <figure class="reveal group relative aspect-[4/3] overflow-hidden"><img src="images/opt/common-7-800.jpg" srcset="images/opt/common-7-480.webp 480w, images/opt/common-7-800.webp 800w, images/opt/common-7-1200.webp 1200w" sizes="(min-width: 1024px) 33vw, 50vw" width="2200" height="1466" alt="Common area" class="h-full w-full object-cover transition-transform duration-[1.4s] ease-out group-hover:scale-[1.04]" loading="lazy" /></figure>
+        <figure class="reveal group relative aspect-[4/3] overflow-hidden"><img src="images/opt/common-8-800.jpg" srcset="images/opt/common-8-480.webp 480w, images/opt/common-8-800.webp 800w, images/opt/common-8-1200.webp 1200w" sizes="(min-width: 1024px) 33vw, 50vw" width="2200" height="1237" alt="Common area" class="h-full w-full object-cover transition-transform duration-[1.4s] ease-out group-hover:scale-[1.04]" loading="lazy" /></figure>
+        <figure class="reveal group relative aspect-[4/3] overflow-hidden"><img src="images/opt/weights-synergy-800.jpg" srcset="images/opt/weights-synergy-480.webp 480w, images/opt/weights-synergy-800.webp 800w, images/opt/weights-synergy-1200.webp 1200w" sizes="(min-width: 1024px) 33vw, 50vw" width="2200" height="1237" alt="Fitness and weights area" class="h-full w-full object-cover transition-transform duration-[1.4s] ease-out group-hover:scale-[1.04]" loading="lazy" /></figure>
       </div>
     </div>
   </section>
 
   <!-- ============================================================ CTA ============================================================ -->
-  <section class="relative bg-deep2 grain py-28 sm:py-36 overflow-hidden">
+  <section class="relative bg-deep2 grain py-20 sm:py-28 lg:py-36 overflow-hidden">
     <div class="relative mx-auto max-w-3xl px-5 sm:px-8 text-center">
       <p class="reveal flex items-center justify-center gap-4">
         <span class="rule bg-cream/60"></span>
@@ -458,13 +442,15 @@
       </p>
       <p class="reveal mt-8 eyebrow !tracking-[.26em] text-white" style="transition-delay:.25s">By Application Only</p>
       <div class="reveal mt-10 flex flex-col sm:flex-row items-center justify-center gap-6" style="transition-delay:.3s">
-        <a href="https://tally.so/r/aQJJN2" target="_blank" rel="noopener noreferrer" class="btn-luxe btn-solid inline-block">
+        <a href="https://tally.so/r/aQJJN2" target="_blank" rel="noopener noreferrer" class="btn-luxe btn-solid block w-full sm:inline-block sm:w-auto text-center">
           Apply to Join
         </a>
         <a href="index.html" class="eyebrow !tracking-[.2em] !text-[.72rem] text-cream/70 hover:text-cream transition-colors">&larr; Back to Home</a>
       </div>
     </div>
   </section>
+
+  </main>
 
   <!-- ============================================================ FOOTER ============================================================ -->
   <footer class="bg-deep2 py-16 border-t border-cream/10">
@@ -476,11 +462,11 @@
           </span>
           <div>
             <span class="block font-display text-cream text-lg tracking-wide">Jungle Alchemy</span>
-            <span class="block mt-0.5 eyebrow !text-[.62rem] !tracking-[.22em] text-cream/45">Uvita, Costa Rica &middot; January 8&ndash;15, 2027</span>
+            <span class="block mt-0.5 eyebrow !text-[.62rem] !tracking-[.22em] text-cream/75">Uvita, Costa Rica &middot; January 8&ndash;15, 2027</span>
           </div>
         </a>
 
-        <div class="flex items-center gap-7 text-cream/60">
+        <div class="flex items-center gap-7 text-cream/75">
           <a href="https://instagram.com/thebeauwinn" target="_blank" rel="noopener noreferrer" aria-label="Beau on Instagram" class="hover:text-cream transition-colors">
             <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="3.5"/><circle cx="17" cy="7" r="1" fill="currentColor" stroke="none"/></svg>
           </a>
@@ -488,9 +474,9 @@
         </div>
       </div>
 
-      <div class="mt-12 pt-8 border-t border-cream/10 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-cream/35">
+      <div class="mt-10 sm:mt-12 pt-8 border-t border-cream/10 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-cream/70">
         <p>&copy; 2026 Jungle Alchemy &middot; hosted by Beau Winn &middot; junglealchemyretreats.com</p>
-        <p class="font-display italic text-lg text-sky/60">Feel alive again.</p>
+        <p class="font-display italic text-lg text-sky">Feel alive again.</p>
       </div>
     </div>
   </footer>
@@ -519,7 +505,7 @@
       if (!main || !thumbs.length) return;
       thumbs.forEach(thumb => {
         thumb.addEventListener('click', () => {
-          main.src = thumb.dataset.src;
+          main.src = thumb.dataset.src; if (thumb.dataset.srcset) main.srcset = thumb.dataset.srcset;
           thumbs.forEach(t => t.classList.remove('is-active'));
           thumb.classList.add('is-active');
         });

@@ -1,0 +1,460 @@
+{
+ "images/hero.jpg": {
+  "webp": {
+   "640": "images/opt/hero-640.webp",
+   "960": "images/opt/hero-960.webp",
+   "1280": "images/opt/hero-1280.webp",
+   "1800": "images/opt/hero-1800.webp"
+  },
+  "jpg": "images/opt/hero-960.jpg",
+  "w": 1800,
+  "h": 1200
+ },
+ "images/beach-palm.jpg": {
+  "webp": {
+   "480": "images/opt/beach-palm-480.webp",
+   "768": "images/opt/beach-palm-768.webp",
+   "1024": "images/opt/beach-palm-1024.webp"
+  },
+  "jpg": "images/opt/beach-palm-1024.jpg",
+  "w": 1024,
+  "h": 768
+ },
+ "images/beau-poker.jpg": {
+  "webp": {
+   "400": "images/opt/beau-poker-400.webp",
+   "640": "images/opt/beau-poker-640.webp",
+   "900": "images/opt/beau-poker-900.webp"
+  },
+  "jpg": "images/opt/beau-poker-900.jpg",
+  "w": 1290,
+  "h": 1728
+ },
+ "images/beau-alive.jpg": {
+  "webp": {
+   "400": "images/opt/beau-alive-400.webp",
+   "640": "images/opt/beau-alive-640.webp",
+   "900": "images/opt/beau-alive-900.webp"
+  },
+  "jpg": "images/opt/beau-alive-900.jpg",
+  "w": 1400,
+  "h": 1867
+ },
+ "images/venue-yoga-deck.jpg": {
+  "webp": {
+   "640": "images/opt/venue-yoga-deck-640.webp",
+   "960": "images/opt/venue-yoga-deck-960.webp",
+   "1280": "images/opt/venue-yoga-deck-1280.webp"
+  },
+  "jpg": "images/opt/venue-yoga-deck-960.jpg",
+  "w": 2200,
+  "h": 1466
+ },
+ "images/venue-suite.jpg": {
+  "webp": {
+   "640": "images/opt/venue-suite-640.webp",
+   "960": "images/opt/venue-suite-960.webp",
+   "1280": "images/opt/venue-suite-1280.webp"
+  },
+  "jpg": "images/opt/venue-suite-960.jpg",
+  "w": 2200,
+  "h": 1466
+ },
+ "home 5.jpg": {
+  "webp": {
+   "640": "images/opt/home-5-640.webp",
+   "960": "images/opt/home-5-960.webp",
+   "1280": "images/opt/home-5-1280.webp"
+  },
+  "jpg": "images/opt/home-5-960.jpg",
+  "w": 2000,
+  "h": 1332
+ },
+ "images/venue-grounds.jpg": {
+  "webp": {
+   "640": "images/opt/venue-grounds-640.webp",
+   "960": "images/opt/venue-grounds-960.webp",
+   "1280": "images/opt/venue-grounds-1280.webp",
+   "1600": "images/opt/venue-grounds-1600.webp"
+  },
+  "jpg": "images/opt/venue-grounds-960.jpg",
+  "w": 2160,
+  "h": 1439
+ },
+ "images/beau.jpg": {
+  "webp": {
+   "480": "images/opt/beau-480.webp",
+   "768": "images/opt/beau-768.webp"
+  },
+  "jpg": "images/opt/beau-768.jpg",
+  "w": 1043,
+  "h": 2200
+ },
+ "images/dave.jpg": {
+  "webp": {
+   "96": "images/opt/dave-96.webp",
+   "128": "images/opt/dave-128.webp"
+  },
+  "jpg": "images/opt/dave-128.jpg",
+  "w": 2195,
+  "h": 2200
+ },
+ "images/johnson.jpg": {
+  "webp": {
+   "96": "images/opt/johnson-96.webp",
+   "128": "images/opt/johnson-128.webp"
+  },
+  "jpg": "images/opt/johnson-128.jpg",
+  "w": 2200,
+  "h": 2192
+ },
+ "images/jon.jpg": {
+  "webp": {
+   "96": "images/opt/jon-96.webp",
+   "128": "images/opt/jon-128.webp"
+  },
+  "jpg": "images/opt/jon-128.jpg",
+  "w": 2200,
+  "h": 2187
+ },
+ "Estrella - 2 single beds private batheroom - Synergy  (7).jpg": {
+  "webp": {
+   "480": "images/opt/estrella-2-single-beds-private-batheroom-synergy-7-480.webp",
+   "800": "images/opt/estrella-2-single-beds-private-batheroom-synergy-7-800.webp",
+   "1200": "images/opt/estrella-2-single-beds-private-batheroom-synergy-7-1200.webp"
+  },
+  "jpg": "images/opt/estrella-2-single-beds-private-batheroom-synergy-7-800.jpg",
+  "w": 2200,
+  "h": 1466
+ },
+ "dorm3.jpg": {
+  "webp": {
+   "480": "images/opt/dorm3-480.webp",
+   "800": "images/opt/dorm3-800.webp",
+   "1200": "images/opt/dorm3-1200.webp"
+  },
+  "jpg": "images/opt/dorm3-800.jpg",
+  "w": 1447,
+  "h": 2000
+ },
+ "flower 1.jpg": {
+  "webp": {
+   "480": "images/opt/flower-1-480.webp",
+   "800": "images/opt/flower-1-800.webp",
+   "1200": "images/opt/flower-1-1200.webp"
+  },
+  "jpg": "images/opt/flower-1-800.jpg",
+  "w": 2200,
+  "h": 1466
+ },
+ "Lotus 1.jpg": {
+  "webp": {
+   "480": "images/opt/lotus-1-480.webp",
+   "800": "images/opt/lotus-1-800.webp",
+   "1200": "images/opt/lotus-1-1200.webp"
+  },
+  "jpg": "images/opt/lotus-1-800.jpg",
+  "w": 2200,
+  "h": 1238
+ },
+ "LM3.jpg": {
+  "webp": {
+   "480": "images/opt/lm3-480.webp",
+   "800": "images/opt/lm3-800.webp",
+   "1200": "images/opt/lm3-1200.webp"
+  },
+  "jpg": "images/opt/lm3-800.jpg",
+  "w": 2200,
+  "h": 1466
+ },
+ "Kogui Temple - Synergy  (1).jpg": {
+  "webp": {
+   "480": "images/opt/kogui-temple-synergy-1-480.webp",
+   "800": "images/opt/kogui-temple-synergy-1-800.webp",
+   "1200": "images/opt/kogui-temple-synergy-1-1200.webp"
+  },
+  "jpg": "images/opt/kogui-temple-synergy-1-800.jpg",
+  "w": 2200,
+  "h": 1466
+ },
+ "weights synergy.jpg": {
+  "webp": {
+   "480": "images/opt/weights-synergy-480.webp",
+   "800": "images/opt/weights-synergy-800.webp",
+   "1200": "images/opt/weights-synergy-1200.webp"
+  },
+  "jpg": "images/opt/weights-synergy-800.jpg",
+  "w": 2200,
+  "h": 1237
+ },
+ "The Village  surrounded by 9 Luxury Queen suites  (18).jpg": {
+  "webp": {
+   "480": "images/opt/the-village-surrounded-by-9-luxury-queen-suites-18-480.webp",
+   "800": "images/opt/the-village-surrounded-by-9-luxury-queen-suites-18-800.webp",
+   "1200": "images/opt/the-village-surrounded-by-9-luxury-queen-suites-18-1200.webp"
+  },
+  "jpg": "images/opt/the-village-surrounded-by-9-luxury-queen-suites-18-800.jpg",
+  "w": 2200,
+  "h": 1466
+ },
+ "common 8 .jpg": {
+  "webp": {
+   "480": "images/opt/common-8-480.webp",
+   "800": "images/opt/common-8-800.webp",
+   "1200": "images/opt/common-8-1200.webp"
+  },
+  "jpg": "images/opt/common-8-800.jpg",
+  "w": 2200,
+  "h": 1237
+ },
+ "common 7.jpg": {
+  "webp": {
+   "480": "images/opt/common-7-480.webp",
+   "800": "images/opt/common-7-800.webp",
+   "1200": "images/opt/common-7-1200.webp"
+  },
+  "jpg": "images/opt/common-7-800.jpg",
+  "w": 2200,
+  "h": 1466
+ },
+ "flower 2.jpg": {
+  "webp": {
+   "480": "images/opt/flower-2-480.webp",
+   "800": "images/opt/flower-2-800.webp",
+   "1200": "images/opt/flower-2-1200.webp"
+  },
+  "jpg": "images/opt/flower-2-800.jpg",
+  "w": 2200,
+  "h": 1466
+ },
+ "common 3.jpg": {
+  "webp": {
+   "480": "images/opt/common-3-480.webp",
+   "800": "images/opt/common-3-800.webp",
+   "1200": "images/opt/common-3-1200.webp"
+  },
+  "jpg": "images/opt/common-3-800.jpg",
+  "w": 2200,
+  "h": 1467
+ },
+ "dorm2.jpg": {
+  "webp": {
+   "480": "images/opt/dorm2-480.webp",
+   "800": "images/opt/dorm2-800.webp",
+   "1200": "images/opt/dorm2-1200.webp"
+  },
+  "jpg": "images/opt/dorm2-800.jpg",
+  "w": 1447,
+  "h": 2000
+ },
+ "Kogui Temple - Synergy  (3).jpg": {
+  "webp": {
+   "480": "images/opt/kogui-temple-synergy-3-480.webp",
+   "800": "images/opt/kogui-temple-synergy-3-800.webp",
+   "1200": "images/opt/kogui-temple-synergy-3-1200.webp"
+  },
+  "jpg": "images/opt/kogui-temple-synergy-3-800.jpg",
+  "w": 2000,
+  "h": 1332
+ },
+ "Mango 1.jpg": {
+  "webp": {
+   "480": "images/opt/mango-1-480.webp",
+   "800": "images/opt/mango-1-800.webp",
+   "1200": "images/opt/mango-1-1200.webp"
+  },
+  "jpg": "images/opt/mango-1-800.jpg",
+  "w": 2200,
+  "h": 1466
+ },
+ "LM1.jpg": {
+  "webp": {
+   "480": "images/opt/lm1-480.webp",
+   "800": "images/opt/lm1-800.webp",
+   "1200": "images/opt/lm1-1200.webp"
+  },
+  "jpg": "images/opt/lm1-800.jpg",
+  "w": 2200,
+  "h": 1466
+ },
+ "Lotus 2.jpg": {
+  "webp": {
+   "480": "images/opt/lotus-2-480.webp",
+   "800": "images/opt/lotus-2-800.webp",
+   "1200": "images/opt/lotus-2-1200.webp"
+  },
+  "jpg": "images/opt/lotus-2-800.jpg",
+  "w": 2200,
+  "h": 1466
+ },
+ "mango 3.jpg": {
+  "webp": {
+   "480": "images/opt/mango-3-480.webp",
+   "800": "images/opt/mango-3-800.webp",
+   "1200": "images/opt/mango-3-1200.webp"
+  },
+  "jpg": "images/opt/mango-3-800.jpg",
+  "w": 2200,
+  "h": 1467
+ },
+ "hamsa 2.jpg": {
+  "webp": {
+   "480": "images/opt/hamsa-2-480.webp",
+   "800": "images/opt/hamsa-2-800.webp",
+   "1200": "images/opt/hamsa-2-1200.webp"
+  },
+  "jpg": "images/opt/hamsa-2-800.jpg",
+  "w": 1467,
+  "h": 2200
+ },
+ "common 6.jpg": {
+  "webp": {
+   "480": "images/opt/common-6-480.webp",
+   "800": "images/opt/common-6-800.webp",
+   "1200": "images/opt/common-6-1200.webp"
+  },
+  "jpg": "images/opt/common-6-800.jpg",
+  "w": 2200,
+  "h": 1466
+ },
+ "common 1.jpg": {
+  "webp": {
+   "480": "images/opt/common-1-480.webp",
+   "800": "images/opt/common-1-800.webp",
+   "1200": "images/opt/common-1-1200.webp"
+  },
+  "jpg": "images/opt/common-1-800.jpg",
+  "w": 2200,
+  "h": 1466
+ },
+ "Lotus 3.jpg": {
+  "webp": {
+   "480": "images/opt/lotus-3-480.webp",
+   "800": "images/opt/lotus-3-800.webp",
+   "1200": "images/opt/lotus-3-1200.webp"
+  },
+  "jpg": "images/opt/lotus-3-800.jpg",
+  "w": 2200,
+  "h": 1238
+ },
+ "dorm1.jpg": {
+  "webp": {
+   "480": "images/opt/dorm1-480.webp",
+   "800": "images/opt/dorm1-800.webp",
+   "1200": "images/opt/dorm1-1200.webp"
+  },
+  "jpg": "images/opt/dorm1-800.jpg",
+  "w": 1447,
+  "h": 2000
+ },
+ "Hamsa 1 and Flower of life 2 rooms - Each with 2 full-size bunk bed private bathrooms  -- Synergy (2).jpg": {
+  "webp": {
+   "480": "images/opt/hamsa-1-and-flower-of-life-2-rooms-each-with-2-full-size-bunk-bed-private-bathrooms-synergy-2-480.webp",
+   "800": "images/opt/hamsa-1-and-flower-of-life-2-rooms-each-with-2-full-size-bunk-bed-private-bathrooms-synergy-2-800.webp",
+   "1200": "images/opt/hamsa-1-and-flower-of-life-2-rooms-each-with-2-full-size-bunk-bed-private-bathrooms-synergy-2-1200.webp"
+  },
+  "jpg": "images/opt/hamsa-1-and-flower-of-life-2-rooms-each-with-2-full-size-bunk-bed-private-bathrooms-synergy-2-800.jpg",
+  "w": 2200,
+  "h": 1466
+ },
+ "4.jpg": {
+  "webp": {
+   "480": "images/opt/4-480.webp",
+   "800": "images/opt/4-800.webp",
+   "1200": "images/opt/4-1200.webp"
+  },
+  "jpg": "images/opt/4-800.jpg",
+  "w": 2200,
+  "h": 1466
+ },
+ "common 2.jpg": {
+  "webp": {
+   "480": "images/opt/common-2-480.webp",
+   "800": "images/opt/common-2-800.webp",
+   "1200": "images/opt/common-2-1200.webp"
+  },
+  "jpg": "images/opt/common-2-800.jpg",
+  "w": 2200,
+  "h": 1465
+ },
+ "hamsa 3.jpg": {
+  "webp": {
+   "480": "images/opt/hamsa-3-480.webp",
+   "800": "images/opt/hamsa-3-800.webp",
+   "1200": "images/opt/hamsa-3-1200.webp"
+  },
+  "jpg": "images/opt/hamsa-3-800.jpg",
+  "w": 2200,
+  "h": 1466
+ },
+ "flower 3.jpg": {
+  "webp": {
+   "480": "images/opt/flower-3-480.webp",
+   "800": "images/opt/flower-3-800.webp",
+   "1200": "images/opt/flower-3-1200.webp"
+  },
+  "jpg": "images/opt/flower-3-800.jpg",
+  "w": 2200,
+  "h": 1466
+ },
+ "mango 2.jpg": {
+  "webp": {
+   "480": "images/opt/mango-2-480.webp",
+   "800": "images/opt/mango-2-800.webp",
+   "1200": "images/opt/mango-2-1200.webp"
+  },
+  "jpg": "images/opt/mango-2-800.jpg",
+  "w": 2200,
+  "h": 1466
+ },
+ "common 5.jpg": {
+  "webp": {
+   "480": "images/opt/common-5-480.webp",
+   "800": "images/opt/common-5-800.webp",
+   "1200": "images/opt/common-5-1200.webp"
+  },
+  "jpg": "images/opt/common-5-800.jpg",
+  "w": 2200,
+  "h": 1467
+ },
+ "Estrella - 2 single beds private batheroom - Synergy  (4).jpg": {
+  "webp": {
+   "480": "images/opt/estrella-2-single-beds-private-batheroom-synergy-4-480.webp",
+   "800": "images/opt/estrella-2-single-beds-private-batheroom-synergy-4-800.webp",
+   "1200": "images/opt/estrella-2-single-beds-private-batheroom-synergy-4-1200.webp"
+  },
+  "jpg": "images/opt/estrella-2-single-beds-private-batheroom-synergy-4-800.jpg",
+  "w": 2200,
+  "h": 1466
+ },
+ "common 4.jpg": {
+  "webp": {
+   "480": "images/opt/common-4-480.webp",
+   "800": "images/opt/common-4-800.webp",
+   "1200": "images/opt/common-4-1200.webp"
+  },
+  "jpg": "images/opt/common-4-800.jpg",
+  "w": 2200,
+  "h": 1467
+ },
+ "LM2.jpg": {
+  "webp": {
+   "480": "images/opt/lm2-480.webp",
+   "800": "images/opt/lm2-800.webp",
+   "1200": "images/opt/lm2-1200.webp"
+  },
+  "jpg": "images/opt/lm2-800.jpg",
+  "w": 2200,
+  "h": 1466
+ },
+ "Luxury Queen suites - Queen bed private bathroom - deck -- Synergy (31).jpg": {
+  "webp": {
+   "480": "images/opt/luxury-queen-suites-queen-bed-private-bathroom-deck-synergy-31-480.webp",
+   "800": "images/opt/luxury-queen-suites-queen-bed-private-bathroom-deck-synergy-31-800.webp",
+   "1200": "images/opt/luxury-queen-suites-queen-bed-private-bathroom-deck-synergy-31-1200.webp"
+  },
+  "jpg": "images/opt/luxury-queen-suites-queen-bed-private-bathroom-deck-synergy-31-800.jpg",
+  "w": 2200,
+  "h": 1466
+ }
+}
