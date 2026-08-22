@@ -14,9 +14,9 @@ module.exports = {
         sand:   '#E9E4D2',
       },
       fontFamily: {
-        display: ['"DM Serif Display"', 'serif'],
-        serif: ['Newsreader', 'serif'],
-        label: ['Montserrat', 'sans-serif'],
+        display: ['"JA Suits"', '"DM Serif Display"', 'serif'],
+        serif: ['"JA Suits"', 'Newsreader', 'serif'],
+        label: ['"JA Suits"', 'Montserrat', 'sans-serif'],
       },
     },
   },

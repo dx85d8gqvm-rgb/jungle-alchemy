@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160">
+  <circle cx="80" cy="80" r="76" fill="#0E2029"></circle>
+  <circle cx="80" cy="80" r="70" fill="none" stroke="#A7C9DD" stroke-width="1.4"></circle>
+  <circle cx="80" cy="80" r="46" fill="none" stroke="#A7C9DD" stroke-width="1"></circle>
+  <defs>
+    <path id="arcTop" d="M80 80 m-58 0 a58 58 0 0 1 116 0"></path>
+    <path id="arcBot" d="M80 80 m-58 0 a58 58 0 0 0 116 0"></path>
+  </defs>
+  <text font-family="Montserrat, sans-serif" font-weight="600" font-size="12" letter-spacing="4.5" fill="#F1ECD2"><textPath href="#arcTop" startOffset="50%" text-anchor="middle">JUNGLE ALCHEMY</textPath></text>
+  <text font-family="Montserrat, sans-serif" font-weight="600" font-size="10" letter-spacing="3.5" fill="#A7C9DD"><textPath href="#arcBot" startOffset="50%" text-anchor="middle">COSTA RICA</textPath></text>
+  <circle cx="80" cy="66" r="10" fill="#F1ECD2"></circle>
+  <path d="M80 52 L80 47.5 M66 66 L61.5 66 M94 66 L98.5 66 M89.9 56.1 L93.08 52.92 M70.1 56.1 L66.92 52.92" stroke="#F1ECD2" stroke-width="2" fill="none" stroke-linecap="round"></path>
+  <path d="M46 96 q8 -6 17 0 q8 6 17 0 q8 -6 17 0 q8 6 17 0" fill="none" stroke="#A7C9DD" stroke-width="2" stroke-linecap="round"></path>
+  <path d="M46 106 q8 -6 17 0 q8 6 17 0 q8 -6 17 0 q8 6 17 0" fill="none" stroke="#3D7396" stroke-width="2" stroke-linecap="round"></path>
+</svg>
